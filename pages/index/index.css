@@ -1,0 +1,71 @@
+.container {
+  padding: 30rpx;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50rpx;
+  color: white;
+}
+
+.title {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  display: block;
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.params-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20rpx;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  backdrop-filter: blur(10px);
+}
+
+.params-section text {
+  display: block;
+  color: white;
+  font-size: 26rpx;
+  margin: 8rpx 0;
+}
+
+.draw-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  border-radius: 25rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 8rpx 25rpx rgba(238, 90, 36, 0.3);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20rpx;
+  margin: 40rpx 0;
+}
+
+.history-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2rpx solid rgba(255, 255, 255, 0.3);
+  border-radius: 25rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  backdrop-filter: blur(10px);
+}
