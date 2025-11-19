@@ -100,6 +100,19 @@ export default {
   },
   
   methods: {
+	  
+	// 🔥 添加获取问题的方法
+	    getQuestion() {
+	      return this.questionSeed.trim(); // 返回去除空格的问题文本
+	    },
+	    
+	    // 🔥 在问题变更时发射事件
+	    emitQuestionSeed() {
+	      const question = this.questionSeed.trim();
+	      this.currentSeedValue = question ? `问题: ${question.substring(0, 15)}...` : null;
+	      this.$emit('question-change', question);
+	    },
+	  
     emitNumberSeed() {
       if (this.numberSeed) {
         this.currentSeedValue = `数字: ${this.numberSeed}`;
@@ -148,6 +161,7 @@ export default {
       this.timeSeed = '';
       this.currentSeedValue = null;
       this.$emit('seed-change', Date.now());
+	  this.$emit('question-change', ''); // 🔥 发射空问题
       this.showFeedback('已重置为默认种子');
     },
     

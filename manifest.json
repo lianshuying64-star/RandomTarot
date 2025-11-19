@@ -63,7 +63,7 @@
         "title" : "tarotGenerate",
         "router" : {
             "mode" : "hash",
-            "base" : "tarotGenerate"
+            "base" : "./"
         }
     }
 }

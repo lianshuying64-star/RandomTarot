@@ -12107,16 +12107,21 @@ ${o3}
     constructor(seed = Date.now()) {
       this.seed = Number(seed) || Date.now();
       this.methods = ["lcg", "xorshift", "mersenne"];
+      this.positionSeed = this._generatePositionSeed(this.seed);
     }
-    // ==================== 多种随机算法 ====================
-    // LCG算法 (快速、可复现)
+    // 为正逆位生成独立种子
+    _generatePositionSeed(baseSeed) {
+      return baseSeed * 1664525 + 1013904223 & 2147483647;
+    }
+    // ==================== 多种随机算法（保留） ====================
+    // LCG算法
     lcg(seed = this.seed) {
       const a2 = 1103515245;
       const c2 = 12345;
       const m2 = 2 ** 31;
       return (seed * a2 + c2) % m2;
     }
-    // Xorshift算法 (高质量随机)
+    // Xorshift算法
     xorshift(seed = this.seed) {
       let x = seed;
       x ^= x << 13;
@@ -12124,7 +12129,7 @@ ${o3}
       x ^= x << 5;
       return x < 0 ? ~x + 1 : x;
     }
-    // 简化版梅森旋转
+    // 梅森旋转
     mersenne(seed = this.seed) {
       const n2 = 624;
       const mt2 = new Array(n2);
@@ -12141,7 +12146,7 @@ ${o3}
       const methodIndex = methodSeed % this.methods.length;
       return this.methods[methodIndex];
     }
-    // 生成随机整数
+    // 生成随机整数（保留算法选择）
     randomInt(max = 78, method = "auto") {
       const selectedMethod = method === "auto" ? this.selectRandomMethod() : method;
       let randomNum;
@@ -12164,29 +12169,29 @@ ${o3}
       }
       return randomNum % max;
     }
-    // 🔥 正逆位随机 - 使用相同的随机序列消费
-    randomBool(method = "auto") {
-      return this.randomInt(2, method) === 1;
+    // 🔥 固定：正逆位使用独立的Xorshift算法（高质量随机）
+    randomBool() {
+      this.positionSeed = this._xorshiftPosition(this.positionSeed);
+      return this.positionSeed % 2 === 1;
     }
-    // 从字符串中随机抽取字符
-    randomFromString(str, length = 1, method = "auto") {
-      let result = "";
-      for (let i2 = 0; i2 < length; i2++) {
-        const index = this.randomInt(str.length, method);
-        result += str.charAt(index);
-      }
-      return result;
+    // 专门为正逆位优化的Xorshift
+    _xorshiftPosition(seed) {
+      let x = seed;
+      x ^= x << 13;
+      x ^= x >> 17;
+      x ^= x << 5;
+      return x < 0 ? ~x + 1 : x;
     }
     // ==================== 塔罗牌专用方法 ====================
     // 抽单张牌
     drawTarotCard(method = "auto") {
       const cardIndex = this.randomInt(78, method);
-      const isReversed = this.randomBool(method);
-      const randomSeed = this.seed;
+      const isReversed = this.randomBool();
       return {
         cardIndex,
         isReversed,
-        randomSeed,
+        randomSeed: this.seed,
+        positionSeed: this.positionSeed,
         method: method === "auto" ? this.selectRandomMethod() : method
       };
     }
@@ -12196,11 +12201,12 @@ ${o3}
       const selectedMethod = method === "auto" ? this.selectRandomMethod() : method;
       for (let i2 = 0; i2 < count; i2++) {
         const cardIndex = this.randomInt(78, selectedMethod);
-        const isReversed = this.randomBool(selectedMethod);
+        const isReversed = this.randomBool();
         cards.push({
           cardIndex,
           isReversed,
           randomSeed: this.seed,
+          positionSeed: this.positionSeed,
           method: selectedMethod,
           position: i2
         });
@@ -12220,20 +12226,51 @@ ${o3}
         };
       });
     }
-    // ==================== 工具方法 ====================
-    // 获取当前种子
+    // ==================== 测试方法 ====================
+    // 测试正逆位分布
+    testPositionDistribution(testCount = 1e3) {
+      let uprightCount = 0;
+      let reversedCount = 0;
+      for (let i2 = 0; i2 < testCount; i2++) {
+        const isReversed = this.randomBool();
+        if (isReversed) {
+          reversedCount++;
+        } else {
+          uprightCount++;
+        }
+      }
+      const uprightPercent = (uprightCount / testCount * 100).toFixed(2);
+      const reversedPercent = (reversedCount / testCount * 100).toFixed(2);
+      formatAppLog("log", "at utils/random.js:169", `🔍 正逆位分布测试 (${testCount}次):`);
+      formatAppLog("log", "at utils/random.js:170", `⬆️  正位: ${uprightCount} (${uprightPercent}%)`);
+      formatAppLog("log", "at utils/random.js:171", `🔁 逆位: ${reversedCount} (${reversedPercent}%)`);
+      formatAppLog("log", "at utils/random.js:172", `📊 分布偏差: ${Math.abs(50 - parseFloat(uprightPercent)).toFixed(2)}%`);
+      return {
+        uprightCount,
+        reversedCount,
+        uprightPercent,
+        reversedPercent,
+        deviation: Math.abs(50 - parseFloat(uprightPercent))
+      };
+    }
+    // 获取当前状态
     getCurrentSeed() {
       return this.seed;
     }
     // 设置新种子
     setSeed(newSeed) {
       this.seed = Number(newSeed) || Date.now();
+      this.positionSeed = this._generatePositionSeed(this.seed);
       return this.seed;
     }
-    // 复制实例（用于并行随机）
-    clone() {
-      return new AdvancedRandomGenerator(this.seed);
-    }
+  }
+  formatAppLog("log", "at utils/random.js:197", "🧪 测试固定正逆位算法...");
+  const testRandom = new AdvancedRandomGenerator(12345);
+  const testResult = testRandom.testPositionDistribution(1e3);
+  if (testResult.deviation < 5) {
+    formatAppLog("log", "at utils/random.js:202", "✅ 正逆位算法测试通过！");
+  } else {
+    formatAppLog("warn", "at utils/random.js:204", "⚠️ 正逆位算法需要优化");
   }
   class SeedGenerator {
     // 数字种子
@@ -12275,16 +12312,17 @@ ${o3}
       });
       return Math.abs(finalSeed);
     }
-    // 随机参数生成 - 使用完整的随机生成器
+    // 随机参数生成
     static randomParams(baseSeed) {
       const random = new AdvancedRandomGenerator(baseSeed);
       const methods = ["LCG算法", "异或位移", "梅森旋转"];
       const algorithms = ["lcg", "xorshift", "mersenne"];
       return {
-        method: methods[random.randomInt(methods.length)],
-        cards: random.randomInt(5) + 1,
+        method: methods[random.randomInt(methods.length, "lcg")],
+        // 使用LCG确保稳定
+        cards: random.randomInt(5, "lcg") + 1,
         // 1-5张牌
-        algorithm: algorithms[random.randomInt(algorithms.length)]
+        algorithm: algorithms[random.randomInt(algorithms.length, "lcg")]
       };
     }
   }
@@ -12701,7 +12739,7 @@ ${o3}
                   size: "20",
                   color: "#fff"
                 }),
-                vue.createTextVNode(" 分享结果 ")
+                vue.createTextVNode(" 📤 分享结果 ")
               ])) : vue.createCommentVNode("v-if", true)
             ])
           ];

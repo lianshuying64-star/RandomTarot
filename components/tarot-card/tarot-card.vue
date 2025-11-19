@@ -50,11 +50,15 @@ export default {
   
   data() {
     return {
-      isReversed: this.reversed
+      // isReversed: this.reversed
     };
   },
   
   computed: {
+	    isReversed() {
+	      // 直接使用 prop 值
+	      return this.reversed;
+	    },
     currentMeaning() {
       return this.isReversed ? this.card.reverse : this.card.meaning;
     }

@@ -1,15 +1,21 @@
-// utils/random.js
-// 完整的随机算法库 - 支持多种算法和正逆位随机
-
+// utils/random.js - 保留算法选择，固定正逆位算法
 class AdvancedRandomGenerator {
   constructor(seed = Date.now()) {
     this.seed = Number(seed) || Date.now();
     this.methods = ['lcg', 'xorshift', 'mersenne'];
+    // 🔥 为正逆位固定使用独立的Xorshift算法
+    this.positionSeed = this._generatePositionSeed(this.seed);
   }
   
-  // ==================== 多种随机算法 ====================
+  // 为正逆位生成独立种子
+  _generatePositionSeed(baseSeed) {
+    // 使用完全不同的参数确保独立性
+    return (baseSeed * 1664525 + 1013904223) & 0x7FFFFFFF;
+  }
   
-  // LCG算法 (快速、可复现)
+  // ==================== 多种随机算法（保留） ====================
+  
+  // LCG算法
   lcg(seed = this.seed) {
     const a = 1103515245;
     const c = 12345;
@@ -17,7 +23,7 @@ class AdvancedRandomGenerator {
     return (seed * a + c) % m;
   }
   
-  // Xorshift算法 (高质量随机)
+  // Xorshift算法
   xorshift(seed = this.seed) {
     let x = seed;
     x ^= x << 13;
@@ -26,7 +32,7 @@ class AdvancedRandomGenerator {
     return x < 0 ? ~x + 1 : x;
   }
   
-  // 简化版梅森旋转
+  // 梅森旋转
   mersenne(seed = this.seed) {
     const n = 624;
     const mt = new Array(n);
@@ -48,7 +54,7 @@ class AdvancedRandomGenerator {
     return this.methods[methodIndex];
   }
   
-  // 生成随机整数
+  // 生成随机整数（保留算法选择）
   randomInt(max = 78, method = 'auto') {
     const selectedMethod = method === 'auto' ? this.selectRandomMethod() : method;
     let randomNum;
@@ -74,33 +80,34 @@ class AdvancedRandomGenerator {
     return randomNum % max;
   }
   
-  // 🔥 正逆位随机 - 使用相同的随机序列消费
-  randomBool(method = 'auto') {
-    return this.randomInt(2, method) === 1;
+  // 🔥 固定：正逆位使用独立的Xorshift算法（高质量随机）
+  randomBool() {
+    // 使用独立的Xorshift算法生成正逆位
+    this.positionSeed = this._xorshiftPosition(this.positionSeed);
+    return (this.positionSeed % 2) === 1;
   }
   
-  // 从字符串中随机抽取字符
-  randomFromString(str, length = 1, method = 'auto') {
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      const index = this.randomInt(str.length, method);
-      result += str.charAt(index);
-    }
-    return result;
+  // 专门为正逆位优化的Xorshift
+  _xorshiftPosition(seed) {
+    let x = seed;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+    return x < 0 ? ~x + 1 : x;
   }
   
   // ==================== 塔罗牌专用方法 ====================
   
   // 抽单张牌
   drawTarotCard(method = 'auto') {
-    const cardIndex = this.randomInt(78, method);      // 消费第一个随机数选牌
-    const isReversed = this.randomBool(method);        // 消费第二个随机数决定正逆
-    const randomSeed = this.seed;                      // 记录当前种子
+    const cardIndex = this.randomInt(78, method);  // 使用选择的算法
+    const isReversed = this.randomBool();          // 🔥 固定使用高质量正逆位算法
     
     return {
       cardIndex,
       isReversed,
-      randomSeed,
+      randomSeed: this.seed,
+      positionSeed: this.positionSeed,
       method: method === 'auto' ? this.selectRandomMethod() : method
     };
   }
@@ -111,13 +118,14 @@ class AdvancedRandomGenerator {
     const selectedMethod = method === 'auto' ? this.selectRandomMethod() : method;
     
     for (let i = 0; i < count; i++) {
-      const cardIndex = this.randomInt(78, selectedMethod);    // 选牌
-      const isReversed = this.randomBool(selectedMethod);      // 正逆位
+      const cardIndex = this.randomInt(78, selectedMethod);  // 使用选择的算法
+      const isReversed = this.randomBool();                  // 🔥 固定正逆位算法
       
       cards.push({
         cardIndex,
         isReversed,
         randomSeed: this.seed,
+        positionSeed: this.positionSeed,
         method: selectedMethod,
         position: i
       });
@@ -139,9 +147,40 @@ class AdvancedRandomGenerator {
     }));
   }
   
-  // ==================== 工具方法 ====================
+  // ==================== 测试方法 ====================
   
-  // 获取当前种子
+  // 测试正逆位分布
+  testPositionDistribution(testCount = 1000) {
+    let uprightCount = 0;
+    let reversedCount = 0;
+    
+    for (let i = 0; i < testCount; i++) {
+      const isReversed = this.randomBool();
+      if (isReversed) {
+        reversedCount++;
+      } else {
+        uprightCount++;
+      }
+    }
+    
+    const uprightPercent = (uprightCount / testCount * 100).toFixed(2);
+    const reversedPercent = (reversedCount / testCount * 100).toFixed(2);
+    
+    console.log(`🔍 正逆位分布测试 (${testCount}次):`);
+    console.log(`⬆️  正位: ${uprightCount} (${uprightPercent}%)`);
+    console.log(`🔁 逆位: ${reversedCount} (${reversedPercent}%)`);
+    console.log(`📊 分布偏差: ${Math.abs(50 - parseFloat(uprightPercent)).toFixed(2)}%`);
+    
+    return {
+      uprightCount,
+      reversedCount,
+      uprightPercent,
+      reversedPercent,
+      deviation: Math.abs(50 - parseFloat(uprightPercent))
+    };
+  }
+  
+  // 获取当前状态
   getCurrentSeed() {
     return this.seed;
   }
@@ -149,17 +188,10 @@ class AdvancedRandomGenerator {
   // 设置新种子
   setSeed(newSeed) {
     this.seed = Number(newSeed) || Date.now();
+    this.positionSeed = this._generatePositionSeed(this.seed);
     return this.seed;
-  }
-  
-  // 复制实例（用于并行随机）
-  clone() {
-    return new AdvancedRandomGenerator(this.seed);
   }
 }
 
-// 默认导出
-export { AdvancedRandomGenerator };
 
-// 创建默认实例
-export const defaultRandom = new AdvancedRandomGenerator();
+export { AdvancedRandomGenerator };

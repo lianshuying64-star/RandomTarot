@@ -47,16 +47,16 @@ class SeedGenerator {
     return Math.abs(finalSeed);
   }
   
-  // 随机参数生成 - 使用完整的随机生成器
+  // 随机参数生成
   static randomParams(baseSeed) {
     const random = new AdvancedRandomGenerator(baseSeed);
     const methods = ['LCG算法', '异或位移', '梅森旋转'];
     const algorithms = ['lcg', 'xorshift', 'mersenne'];
     
     return {
-      method: methods[random.randomInt(methods.length)],
-      cards: random.randomInt(5) + 1, // 1-5张牌
-      algorithm: algorithms[random.randomInt(algorithms.length)]
+      method: methods[random.randomInt(methods.length, 'lcg')], // 使用LCG确保稳定
+      cards: random.randomInt(5, 'lcg') + 1, // 1-5张牌
+      algorithm: algorithms[random.randomInt(algorithms.length, 'lcg')]
     };
   }
 }

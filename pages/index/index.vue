@@ -39,10 +39,13 @@
       
       <!-- 操作按钮 -->
       <view class="bottom-actions">
-        <button @click="shareResult" class="share-btn" v-if="drawnCards.length > 0">
-            <uni-icons type="redo" size="20" color="#fff"></uni-icons>
-            分享结果
+        <!-- 分享按钮 -->
+        <button @click="openShareDialog" class="share-btn" v-if="drawnCards.length > 0">
+            📤 分享结果
         </button>
+            
+        <!-- 分享弹窗 -->
+        <share-dialog ref="shareDialog" />
       </view>
       
     </uni-section>
@@ -69,6 +72,7 @@
 	import UniLoadMore from '@/uni_modules/uni-load-more/components/uni-load-more/uni-load-more.vue';
 	import UniPopup from '@/uni_modules/uni-popup/components/uni-popup/uni-popup.vue';
 	
+	import ShareDialog from '@/components/share-dialog/share-dialog.vue';
 	import DrawResult from '@/components/draw-result/draw-result.vue';
 	import DrawSettings from '@/components/draw-settings/draw-settings.vue';
 	import SeedInput from '@/components/seed-input/seed-input.vue';
@@ -93,7 +97,8 @@
 		DrawSettings,
 	    SeedInput,
 	    TarotCard,
-		DrawResult
+		DrawResult,
+		ShareDialog
 	  },
 	  
   data() {
@@ -109,6 +114,27 @@
   },
   
  methods: {
+	 // 打开分享对话框
+	   openShareDialog() {
+	     // 🔥 从seed-input组件获取问题文本
+	     const question = this.$refs.seedInput ? this.$refs.seedInput.getQuestion() : '';
+	     
+	     this.$refs.shareDialog.open(
+	       this.drawnCards,
+	       question, // 🔥 现在能正确获取问题文本了
+	       this.currentSeed
+	     );
+	   },
+	   
+	   // 处理问题种子变更
+	   handleQuestionChange(question) {
+	     this.question = question; // 🔥 保存问题到data中
+	     if (question) {
+	       this.currentSeed = SeedGenerator.fromQuestion(question);
+	       this.updateRandomParams();
+	     }
+	},
+	 
    // 抽牌设置变更
    onDrawSettingsChange(settings) {
      this.drawSettings = settings;
@@ -209,7 +235,7 @@ async drawCards() {
         spreadDescription: spreadConfig?.descriptions?.[index] || '',
         index: index
       }));
-      
+		
       // 保存历史
       this.$nextTick(() => {
         this.saveToHistory();
@@ -364,78 +390,11 @@ async drawCards() {
      // 页面显示时的逻辑
      console.log('首页显示');
    }
- }
+ },
+ 
 };
 </script>
 
 <style scoped>
-/* 这里只放页面特有的样式，通用样式在 SCSS 文件中 */
-.action-buttons {
-  display: flex;
-  gap: 20rpx;
-  margin: 30rpx 0;
-}
-
-.draw-btn, .reset-btn {
-  flex: 1;
-  height: 90rpx;
-  line-height: 90rpx;
-  border-radius: 25rpx;
-  font-size: 32rpx;
-}
-
-.draw-btn:disabled {
-  opacity: 0.6;
-}
-
-.batch-actions {
-  display: flex;
-  gap: 20rpx;
-  justify-content: center;
-  margin-top: 30rpx;
-  flex-wrap: wrap;
-}
-
-.bottom-actions {
-  margin-top: 50rpx;
-}
-
-.history-btn, .share-btn {
-  width: 100%;
-  height: 80rpx;
-  line-height: 80rpx;
-  border-radius: 20rpx;
-  font-size: 28rpx;
-}
-
-.loading-popup {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 60rpx;
-  border-radius: 20rpx;
-}
-
-.draw-settings {
-  padding: 20rpx 0;
-}
-
-.count-selector {
-  display: flex;
-  align-items: center;
-  gap: 15rpx;
-  flex-wrap: wrap;
-}
-
-.count-btn {
-  padding: 15rpx 25rpx;
-  border: 2rpx solid #ddd;
-  border-radius: 15rpx;
-  background: white;
-  font-size: 26rpx;
-}
-
-.count-btn.active {
-  background: #8B4513;
-  color: white;
-  border-color: #8B4513;
-}
+@import  'index.css'
 </style>

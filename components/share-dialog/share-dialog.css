@@ -1,0 +1,106 @@
+.share-dialog {
+  padding: 40rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  background: #fff;
+  max-height: 80vh;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.dialog-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.share-options, .prompt-options {
+  margin-bottom: 30rpx;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.option-label {
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 20rpx;
+  flex: 1;
+}
+
+.option-desc {
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+
+.picker-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 8rpx;
+  background: #fafafa;
+}
+
+.preview-section {
+  margin-bottom: 40rpx;
+}
+
+.preview-content {
+  max-height: 200rpx;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  background: #fafafa;
+}
+
+.preview-text {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.cancel-btn, .confirm-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+  color: #666;
+  border: 1rpx solid #e5e5e5;
+}
+
+.confirm-btn {
+  background: #8B4513;
+  color: white;
+  border: none;
+}
