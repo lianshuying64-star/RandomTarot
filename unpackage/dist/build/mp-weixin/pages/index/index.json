@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "塔罗牌抽牌器",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#8B4513",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "uni-section": "../../uni_modules/uni-section/components/uni-section/uni-section",
+    "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "share-dialog": "../../components/share-dialog/share-dialog",
+    "draw-result": "../../components/draw-result/draw-result",
+    "draw-settings": "../../components/draw-settings/draw-settings",
+    "seed-input": "../../components/seed-input/seed-input"
+  }
+}

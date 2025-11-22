@@ -102,7 +102,10 @@ export function getAllCards() {
     ...tarotDeck.cups, 
     ...tarotDeck.swords,
     ...tarotDeck.pentacles
-  ];
+  ].map(card => ({
+    ...card,
+    enName: card.enName || card.name // 🔥 确保有 enName
+  }));
 }
 
 // 根据ID获取牌
@@ -110,3 +113,78 @@ export function getCardById(id) {
   const allCards = getAllCards();
   return allCards.find(card => card.id === id);
 }
+
+// utils/tarotData.js
+// 图片路径生成器
+class TarotImageManager {
+  static getImagePath(card) {
+    const { id, enName } = card;
+    
+    // 大阿卡那 (0-21)
+    if (id <= 21) {
+      const number = id.toString().padStart(2, '0');
+      const name = enName.replace('The ', '').replace(/\s+/g, '_');
+	  
+	  const path = `/static/tarot/RWS_Tarot_${number}_${name}.jpg`;
+	        
+	        // 详细调试日志
+	        console.log('=== 图片路径生成调试 ===');
+	        console.log('卡片ID:', id);
+	        console.log('英文名:', enName);
+	        console.log('处理后名:', name);
+	        console.log('生成路径:', path);
+			
+			return path;
+      // return `/static/tarot/RWS_Tarot_${number}_${name}.jpg`;
+    }
+    
+    // 小阿卡那
+    const suitStart = {
+      wands: 22,    // 权杖
+      cups: 36,     // 圣杯  
+      swords: 50,   // 宝剑
+      pentacles: 64 // 星币
+    };
+    
+    // 确定花色
+    let suit, number;
+    if (id >= 22 && id <= 35) {
+      suit = 'Wands';
+      number = (id - 22 + 1).toString().padStart(2, '0');
+    } else if (id >= 36 && id <= 49) {
+      suit = 'Cups'; 
+      number = (id - 36 + 1).toString().padStart(2, '0');
+    } else if (id >= 50 && id <= 63) {
+      suit = 'Swords';
+      number = (id - 50 + 1).toString().padStart(2, '0');
+    } else if (id >= 64 && id <= 77) {
+      suit = 'Pents';
+      number = (id - 64 + 1).toString().padStart(2, '0');
+    }
+    
+    return `/static/tarot/${suit}${number}.jpg`;
+  }
+  
+  // 批量给所有牌添加图片路径
+  static addImagesToDeck(deck) {
+    const allCards = [
+      ...deck.major,
+      ...deck.wands, 
+      ...deck.cups,
+      ...deck.swords,
+      ...deck.pentacles
+    ];
+    
+    return allCards.map(card => ({
+      ...card,
+      imageUrl: this.getImagePath(card)
+    }));
+  }
+  
+  // 牌背面
+  static getBackImage() {
+    return '/static/tarot/tarot_card_back.jpg';
+  }
+}
+
+export { TarotImageManager };

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "抽牌历史",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#8B4513",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
+}

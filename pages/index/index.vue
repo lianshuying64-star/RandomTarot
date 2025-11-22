@@ -1,6 +1,6 @@
 <template>
   <view class="container">
-    <!-- 使用 uni-section 组件 -->
+	<!-- 使用 uni-section 组件 -->
     <uni-section title="🔮 本地塔罗抽牌器" sub-title="完全离线 · 真随机数" type="line">
       
 	  <!-- 使用封装的抽牌设置 -->
@@ -80,6 +80,7 @@
 	import { AdvancedRandomGenerator } from '@/utils/random.js';
 	import { SeedGenerator } from '@/utils/seedGenerator.js';
 	import { getAllCards } from '@/utils/tarotData.js';
+	import { TarotImageManager } from '@/utils/tarotData.js';
 	
 	// 添加这行 - 组件定义开始
 	export default {
@@ -179,30 +180,46 @@
      };
    },
    
-   // 根据牌组类型获取牌
-   getCardByDeckType(cardIndex, deckType) {
-     const allCards = getAllCards();
-     
-     switch (deckType) {
-       case 'major':
-         // 仅大阿卡那 (0-21)
-         const majorCards = allCards.filter(card => card.id <= 21);
-         return majorCards[cardIndex % majorCards.length];
-         
-       case 'minor':
-         // 仅小阿卡那 (22-77)
-         const minorCards = allCards.filter(card => card.id >= 22);
-         return minorCards[cardIndex % minorCards.length];
-         
-       case 'full':
-       default:
-         // 完整78张
-         return allCards[cardIndex];
-     }
-   },
+// 根据牌组类型获取牌
+getCardByDeckType(cardIndex, deckType) {
+  // 🔥 使用 this.allCards 而不是 allCards
+  let targetCards;
+  
+  switch (deckType) {
+    case 'major':
+      // 仅大阿卡那 (0-21)
+      targetCards = this.allCards.filter(card => card.id <= 21); // 🔥 改为 this.allCards
+      break;
+      
+    case 'minor':
+      // 仅小阿卡那 (22-77)
+      targetCards = this.allCards.filter(card => card.id >= 22); // 🔥 改为 this.allCards
+      break;
+      
+    case 'full':
+    default:
+      // 完整78张
+      targetCards = this.allCards; // 🔥 改为 this.allCards
+      break;
+  }
+  
+  // 🔥 确保返回的卡片包含 imageUrl
+  const selectedCard = targetCards[cardIndex % targetCards.length];
+  console.log('选中的卡片:', selectedCard); // 调试
+  
+  return selectedCard;
+},
    
    // 主抽牌函数
 async drawCards() {
+	// 🔥 确保牌数据有图片路径
+	  if (!this.allCards[0].imageUrl) {
+	    this.allCards = getAllCards().map(card => ({
+	      ...card,
+	      imageUrl: TarotImageManager.getImagePath(card)
+	    }));
+	  }
+	
     if (!this.drawSettings) {
       uni.showToast({ title: '请先完成设置', icon: 'none' });
       return;
@@ -384,6 +401,10 @@ async drawCards() {
          this.updateRandomParams();
        }
      });
+	 this.allCards = getAllCards().map(card => ({
+	   ...card,
+	   imageUrl: TarotImageManager.getImagePath(card)
+	 }));
    },
    
    onShow() {

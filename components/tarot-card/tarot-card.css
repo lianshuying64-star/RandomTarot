@@ -93,3 +93,92 @@
   color: #A0522D;
   font-style: italic;
 }
+  
+.image-mode {
+  position: relative;
+  height: 100%;
+}
+
+.click-hint {
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15rpx;
+  border-radius: 0 0 20rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.text-mode {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx;
+}
+
+.text-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.section-title {
+  display: block;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #8B4513;
+  margin: 25rpx 0 15rpx 0;
+  border-left: 4rpx solid #DAA520;
+  padding-left: 15rpx;
+}
+
+.meaning-section, .detail-section, .symbol-section {
+  margin-bottom: 20rpx;
+}
+
+.detail-text, .symbol-text {
+  font-size: 24rpx;
+  color: #555;
+  line-height: 1.6;
+  display: block;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15rpx;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+
+.mode-btn, .detail-btn, .more-btn {
+  flex: 1;
+  padding: 15rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  border: none;
+}
+
+.mode-btn {
+  background: #8B4513;
+  color: white;
+}
+
+.detail-btn {
+  background: #DAA520;
+  color: white;
+}
+
+.more-btn {
+  background: #666;
+  color: white;
+}
+
+/* 响应式调整 */
+@media (max-width: 750rpx) {
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
