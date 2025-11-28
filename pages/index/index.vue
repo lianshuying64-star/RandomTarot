@@ -218,7 +218,7 @@ async drawCards() {
 	      ...card,
 	      imageUrl: TarotImageManager.getImagePath(card)
 	    }));
-	  }
+	  }//？？？
 	
     if (!this.drawSettings) {
       uni.showToast({ title: '请先完成设置', icon: 'none' });

@@ -124,18 +124,7 @@ class TarotImageManager {
     if (id <= 21) {
       const number = id.toString().padStart(2, '0');
       const name = enName.replace('The ', '').replace(/\s+/g, '_');
-	  
-	  const path = `/static/tarot/RWS_Tarot_${number}_${name}.jpg`;
-	        
-	        // 详细调试日志
-	        console.log('=== 图片路径生成调试 ===');
-	        console.log('卡片ID:', id);
-	        console.log('英文名:', enName);
-	        console.log('处理后名:', name);
-	        console.log('生成路径:', path);
-			
-			return path;
-      // return `/static/tarot/RWS_Tarot_${number}_${name}.jpg`;
+      return `/static/tarot/RWS_Tarot_${number}_${name}.jpg`;
     }
     
     // 小阿卡那

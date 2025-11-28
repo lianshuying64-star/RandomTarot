@@ -213,15 +213,6 @@ export default {
     }
   },
   
-  mounted() {
-    console.log('=== 卡片组件调试 ===');
-    console.log('props.card:', this.card);
-    console.log('有imageUrl吗?', !!this.card.imageUrl);
-    console.log('imageUrl值:', this.card.imageUrl);
-    
-    // 检查卡片对象的所有属性
-    console.log('卡片所有属性:', Object.keys(this.card));
-  }
 };
 </script>
 

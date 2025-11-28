@@ -54,7 +54,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$u = {
+  const _sfc_main$v = {
     name: "UniNumberBox",
     emits: ["change", "input", "update:modelValue", "blur", "focus"],
     props: {
@@ -183,7 +183,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$u(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-numbox" }, [
       vue.createElementVNode(
         "view",
@@ -242,8 +242,8 @@ if (uni.restoreGlobal) {
       )
     ]);
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$t], ["__scopeId", "data-v-7ae2ee72"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-number-box/components/uni-number-box/uni-number-box.vue"]]);
-  const _sfc_main$t = {
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$u], ["__scopeId", "data-v-7ae2ee72"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-number-box/components/uni-number-box/uni-number-box.vue"]]);
+  const _sfc_main$u = {
     name: "uniFormsItem",
     options: {
       virtualHost: true
@@ -575,7 +575,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -631,7 +631,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$s], ["__scopeId", "data-v-462874dd"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue"]]);
+  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$t], ["__scopeId", "data-v-462874dd"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue"]]);
   const pages = [
     {
       path: "pages/index/index",
@@ -669,14 +669,10 @@ if (uni.restoreGlobal) {
     list: [
       {
         pagePath: "pages/index/index",
-        iconPath: "static/icons/home.png",
-        selectedIconPath: "static/icons/home-active.png",
         text: "抽牌"
       },
       {
         pagePath: "pages/history/history",
-        iconPath: "static/icons/history.png",
-        selectedIconPath: "static/icons/history-active.png",
         text: "历史"
       }
     ]
@@ -4219,7 +4215,7 @@ ${o3}
     const reg = /^[0-9]*$/g;
     return typeof val === "number" || reg.test(val) ? val + "px" : val;
   };
-  const _sfc_main$s = {
+  const _sfc_main$t = {
     name: "UniIcons",
     emits: ["click"],
     props: {
@@ -4273,7 +4269,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -4288,8 +4284,8 @@ ${o3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-d31e1c47"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
-  const _sfc_main$r = {
+  const UniIcons = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$s], ["__scopeId", "data-v-d31e1c47"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const _sfc_main$s = {
     name: "uni-data-select",
     mixins: [tr.mixinDatacom || {}],
     props: {
@@ -4541,8 +4537,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-stat__select" }, [
       $props.label ? (vue.openBlock(), vue.createElementBlock(
         "span",
@@ -4681,8 +4677,8 @@ ${o3}
       )
     ]);
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__scopeId", "data-v-ddf9e0a2"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-data-select/components/uni-data-select/uni-data-select.vue"]]);
-  const _sfc_main$q = {
+  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$r], ["__scopeId", "data-v-ddf9e0a2"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-data-select/components/uni-data-select/uni-data-select.vue"]]);
+  const _sfc_main$r = {
     name: "uniCollapseItem",
     props: {
       // 列表标题
@@ -4852,8 +4848,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-collapse-item" }, [
       vue.createElementVNode(
         "view",
@@ -4928,8 +4924,8 @@ ${o3}
       )
     ]);
   }
-  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__scopeId", "data-v-3d2dde9f"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-collapse/components/uni-collapse-item/uni-collapse-item.vue"]]);
-  const _sfc_main$p = {
+  const __easycom_3$2 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$q], ["__scopeId", "data-v-3d2dde9f"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-collapse/components/uni-collapse-item/uni-collapse-item.vue"]]);
+  const _sfc_main$q = {
     name: "uniCollapse",
     emits: ["change", "activeItem", "input", "update:modelValue"],
     props: {
@@ -5040,12 +5036,12 @@ ${o3}
       }
     }
   };
-  function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-collapse" }, [
       vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
     ]);
   }
-  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-3f050360"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-collapse/components/uni-collapse/uni-collapse.vue"]]);
+  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$p], ["__scopeId", "data-v-3f050360"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-collapse/components/uni-collapse/uni-collapse.vue"]]);
   class SpreadManager {
     // 获取牌阵配置
     static getSpreadConfig(spreadType) {
@@ -5087,7 +5083,7 @@ ${o3}
       description: "用于关系问题分析"
     }
   });
-  const _sfc_main$o = {
+  const _sfc_main$p = {
     name: "DrawSettings",
     data() {
       return {
@@ -5188,12 +5184,12 @@ ${o3}
       });
     }
   };
-  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_number_box = resolveEasycom(vue.resolveDynamicComponent("uni-number-box"), __easycom_0$4);
     const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_2$2);
     const _component_uni_data_select = resolveEasycom(vue.resolveDynamicComponent("uni-data-select"), __easycom_2$1);
     const _component_uni_collapse_item = resolveEasycom(vue.resolveDynamicComponent("uni-collapse-item"), __easycom_3$2);
-    const _component_uni_collapse = resolveEasycom(vue.resolveDynamicComponent("uni-collapse"), __easycom_4$1);
+    const _component_uni_collapse = resolveEasycom(vue.resolveDynamicComponent("uni-collapse"), __easycom_4$2);
     return vue.openBlock(), vue.createElementBlock("view", { class: "draw-settings" }, [
       vue.createVNode(_component_uni_forms_item, {
         label: "抽牌数量",
@@ -5323,8 +5319,8 @@ ${o3}
       })
     ]);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__scopeId", "data-v-494d61b5"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/draw-settings/draw-settings.vue"]]);
-  const _sfc_main$n = {
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$o], ["__scopeId", "data-v-494d61b5"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/draw-settings/draw-settings.vue"]]);
+  const _sfc_main$o = {
     name: "UniCard",
     emits: ["click"],
     props: {
@@ -5385,7 +5381,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -5483,8 +5479,8 @@ ${o3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-ae4bee67"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
-  const _sfc_main$m = {
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n], ["__scopeId", "data-v-ae4bee67"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
+  const _sfc_main$n = {
     name: "UniNoticeBar",
     emits: ["click", "getmore", "close"],
     props: {
@@ -5627,8 +5623,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     return $data.show ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -5725,7 +5721,7 @@ ${o3}
       /* STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-c3453ea3"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m], ["__scopeId", "data-v-c3453ea3"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue"]]);
   function obj2strClass(obj) {
     let classess = "";
     for (let key in obj) {
@@ -5744,7 +5740,7 @@ ${o3}
     }
     return style;
   }
-  const _sfc_main$l = {
+  const _sfc_main$m = {
     name: "uni-easyinput",
     emits: [
       "click",
@@ -6093,8 +6089,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -6217,7 +6213,7 @@ ${o3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__scopeId", "data-v-09fd5285"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$l], ["__scopeId", "data-v-09fd5285"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
   let Calendar$1 = class Calendar {
     constructor({
       selected,
@@ -6573,7 +6569,7 @@ ${o3}
     }
     return value;
   }
-  const _sfc_main$k = {
+  const _sfc_main$l = {
     props: {
       weeks: {
         type: Object,
@@ -6607,7 +6603,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -6663,7 +6659,7 @@ ${o3}
       /* CLASS, NEED_HYDRATION */
     );
   }
-  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-3c762a01"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar-item.vue"]]);
+  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$k], ["__scopeId", "data-v-3c762a01"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar-item.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -7024,7 +7020,7 @@ ${o3}
   const {
     t: t$2
   } = initVueI18n(i18nMessages);
-  const _sfc_main$j = {
+  const _sfc_main$k = {
     name: "UniDatetimePicker",
     data() {
       return {
@@ -7628,7 +7624,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-datetime-picker" }, [
       vue.createElementVNode("view", {
         onClick: _cache[0] || (_cache[0] = (...args) => $options.initTimePicker && $options.initTimePicker(...args))
@@ -7903,11 +7899,11 @@ ${o3}
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const TimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-1d532b70"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/time-picker.vue"]]);
+  const TimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$j], ["__scopeId", "data-v-1d532b70"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/time-picker.vue"]]);
   const {
     t: t$1
   } = initVueI18n(i18nMessages);
-  const _sfc_main$i = {
+  const _sfc_main$j = {
     components: {
       calendarItem,
       timePicker: TimePicker
@@ -8388,10 +8384,10 @@ ${o3}
       }
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_calendar_item = vue.resolveComponent("calendar-item");
     const _component_time_picker = vue.resolveComponent("time-picker");
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -8681,8 +8677,8 @@ ${o3}
       /* NEED_HYDRATION */
     );
   }
-  const Calendar = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-1d379219"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar.vue"]]);
-  const _sfc_main$h = {
+  const Calendar = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-1d379219"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/calendar.vue"]]);
+  const _sfc_main$i = {
     name: "UniDatetimePicker",
     options: {
       virtualHost: true
@@ -9338,8 +9334,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     const _component_time_picker = vue.resolveComponent("time-picker");
     const _component_Calendar = vue.resolveComponent("Calendar");
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-date" }, [
@@ -9682,7 +9678,7 @@ ${o3}
       }, null, 8, ["date", "defTime", "start-date", "end-date", "selectableTimes", "startPlaceholder", "endPlaceholder", "default-value", "pleStatus", "range", "hasTime", "hideSecond", "onConfirm", "onMaskClose", "onChange"])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-9802168a"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue"]]);
+  const __easycom_3$1 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-9802168a"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue"]]);
   class MPAnimation {
     constructor(options, _this) {
       this.options = options;
@@ -9795,7 +9791,7 @@ ${o3}
     clearTimeout(_this.timer);
     return new MPAnimation(option, _this);
   }
-  const _sfc_main$g = {
+  const _sfc_main$h = {
     name: "uniTransition",
     emits: ["click", "change"],
     props: {
@@ -10046,7 +10042,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.withDirectives((vue.openBlock(), vue.createElementBlock("view", {
       ref: "ani",
       animation: $data.animationData,
@@ -10059,8 +10055,8 @@ ${o3}
       [vue.vShow, $data.isShow]
     ]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-transition/components/uni-transition/uni-transition.vue"]]);
-  const _sfc_main$f = {
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-transition/components/uni-transition/uni-transition.vue"]]);
+  const _sfc_main$g = {
     name: "uniPopup",
     components: {},
     emits: ["change", "maskClick"],
@@ -10410,7 +10406,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_transition = resolveEasycom(vue.resolveDynamicComponent("uni-transition"), __easycom_0$1);
     return $data.showPopup ? (vue.openBlock(), vue.createElementBlock(
       "view",
@@ -10470,8 +10466,8 @@ ${o3}
       /* CLASS */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-4dd3c44b"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-popup/components/uni-popup/uni-popup.vue"]]);
-  const _sfc_main$e = {
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-4dd3c44b"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-popup/components/uni-popup/uni-popup.vue"]]);
+  const _sfc_main$f = {
     name: "PopupSelector",
     props: {
       value: {
@@ -10515,8 +10511,8 @@ ${o3}
       }
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_0);
     return vue.openBlock(), vue.createElementBlock("view", { class: "popup-selector" }, [
       vue.createElementVNode("view", {
@@ -10618,8 +10614,8 @@ ${o3}
       )
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-16d20815"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/popup-selector/popup-selector.vue"]]);
-  const _sfc_main$d = {
+  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-16d20815"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/popup-selector/popup-selector.vue"]]);
+  const _sfc_main$e = {
     name: "UniTag",
     emits: ["click"],
     props: {
@@ -10699,7 +10695,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return $props.text ? (vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -10713,8 +10709,8 @@ ${o3}
       /* TEXT, CLASS, STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const UniTag = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-1f94d070"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-tag/components/uni-tag/uni-tag.vue"]]);
-  const _sfc_main$c = {
+  const UniTag = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-1f94d070"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/uni_modules/uni-tag/components/uni-tag/uni-tag.vue"]]);
+  const _sfc_main$d = {
     data() {
       return {
         numberSeed: "",
@@ -10725,6 +10721,16 @@ ${o3}
       };
     },
     methods: {
+      // 🔥 添加获取问题的方法
+      getQuestion() {
+        return this.questionSeed.trim();
+      },
+      // 🔥 在问题变更时发射事件
+      emitQuestionSeed() {
+        const question = this.questionSeed.trim();
+        this.currentSeedValue = question ? `问题: ${question.substring(0, 15)}...` : null;
+        this.$emit("question-change", question);
+      },
       emitNumberSeed() {
         if (this.numberSeed) {
           this.currentSeedValue = `数字: ${this.numberSeed}`;
@@ -10767,6 +10773,7 @@ ${o3}
         this.timeSeed = "";
         this.currentSeedValue = null;
         this.$emit("seed-change", Date.now());
+        this.$emit("question-change", "");
         this.showFeedback("已重置为默认种子");
       },
       formatTime(timeStr) {
@@ -10783,12 +10790,12 @@ ${o3}
       }
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_notice_bar = resolveEasycom(vue.resolveDynamicComponent("uni-notice-bar"), __easycom_0$2);
     const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_1$1);
     const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_2$2);
     const _component_uni_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("uni-datetime-picker"), __easycom_3$1);
-    const _component_popup_selector = resolveEasycom(vue.resolveDynamicComponent("popup-selector"), __easycom_4);
+    const _component_popup_selector = resolveEasycom(vue.resolveDynamicComponent("popup-selector"), __easycom_4$1);
     const _component_uni_tag = resolveEasycom(vue.resolveDynamicComponent("uni-tag"), UniTag);
     return vue.openBlock(), vue.createElementBlock("view", { class: "seed-input" }, [
       $data.currentSeedValue ? (vue.openBlock(), vue.createBlock(_component_uni_notice_bar, {
@@ -10900,12 +10907,177 @@ ${o3}
       ])
     ]);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-17257cc4"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/seed-input/seed-input.vue"]]);
-  const _sfc_main$b = {
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-17257cc4"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/seed-input/seed-input.vue"]]);
+  const tarotDeck = {
+    major: [
+      { id: 0, name: "愚人", enName: "The Fool", meaning: "新的开始, 冒险, 天真", reverse: "鲁莽, 冒险, 犹豫不决" },
+      { id: 1, name: "魔术师", enName: "The Magician", meaning: "能力, 资源, 创造力", reverse: "欺骗, 未开发潜能, 操纵" },
+      { id: 2, name: "女祭司", enName: "The High Priestess", meaning: "直觉, 神秘, 潜意识", reverse: "隐藏, 肤浅, 忽略直觉" },
+      { id: 3, name: "女皇", enName: "The Empress", meaning: "丰饶, 养育, 感官享受", reverse: "依赖, 停滞, 过度保护" },
+      { id: 4, name: "皇帝", enName: "The Emperor", meaning: "权威, 结构, 控制", reverse: "僵化, 控制欲, 无力" },
+      { id: 5, name: "教皇", enName: "The Hierophant", meaning: "传统, 信仰, 教育", reverse: "反叛, 非传统, 新方法" },
+      { id: 6, name: "恋人", enName: "The Lovers", meaning: "选择, 关系, 价值观", reverse: "不和谐, 错误选择, 冲突" },
+      { id: 7, name: "战车", enName: "The Chariot", meaning: "控制, 意志力, 胜利", reverse: "缺乏方向, 失控, 侵略" },
+      { id: 8, name: "力量", enName: "Strength", meaning: "勇气, 耐心, 内在力量", reverse: "自我怀疑, 软弱, 滥用力量" },
+      { id: 9, name: "隐士", enName: "The Hermit", meaning: "内省, 寻求, 指引", reverse: "孤独, 孤立, 拒绝帮助" },
+      { id: 10, name: "命运之轮", enName: "Wheel of Fortune", meaning: "转折点, 命运, 循环", reverse: "坏运气, 抵抗变化, 外部控制" },
+      { id: 11, name: "正义", enName: "Justice", meaning: "公平, 真相, 因果", reverse: "不公正, 偏见, 责任逃避" },
+      { id: 12, name: "倒吊人", enName: "The Hanged Man", meaning: "牺牲, 新视角, 暂停", reverse: "停滞, 不必要的牺牲, 抗拒" },
+      { id: 13, name: "死神", enName: "Death", meaning: "结束, 转变, 新生", reverse: "抗拒改变, 停滞, 恐惧" },
+      { id: 14, name: "节制", enName: "Temperance", meaning: "平衡, 调和, 耐心", reverse: "不平衡, 极端, 缺乏和谐" },
+      { id: 15, name: "恶魔", enName: "The Devil", meaning: "束缚, 物质主义, 欲望", reverse: "解脱, 释放, 理解" },
+      { id: 16, name: "高塔", enName: "The Tower", meaning: "突然变化, 启示, 觉醒", reverse: "害怕改变, 灾难避免, 拖延" },
+      { id: 17, name: "星星", enName: "The Star", meaning: "希望, 灵感, 宁静", reverse: "绝望, 失去信心, 失望" },
+      { id: 18, name: "月亮", enName: "The Moon", meaning: "幻觉, 恐惧, 潜意识", reverse: "释放恐惧, 理解, 内心平静" },
+      { id: 19, name: "太阳", enName: "The Sun", meaning: "快乐, 成功, 活力", reverse: "暂时挫折, 成功延迟" },
+      { id: 20, name: "审判", enName: "Judgement", meaning: "觉醒, 重生, 召唤", reverse: "自我怀疑, 拒绝召唤, 后悔" },
+      { id: 21, name: "世界", enName: "The World", meaning: "完成, 成就, 旅行", reverse: "未完成, 缺乏完成, 需要反思" }
+    ],
+    wands: [
+      { id: 22, name: "权杖王牌", enName: "Ace of Wands", meaning: "新机会, 灵感, 潜力", reverse: "延迟, 未实现潜力, 缺乏激情" },
+      { id: 23, name: "权杖二", enName: "Two of Wands", meaning: "规划, 决定, 发现", reverse: "害怕未知, 糟糕的规划" },
+      { id: 24, name: "权杖三", enName: "Three of Wands", meaning: "准备, 远见, 扩张", reverse: "延迟, 障碍, 挫折" },
+      { id: 25, name: "权杖四", enName: "Four of Wands", meaning: "庆祝, 和谐, 婚姻", reverse: "缺乏支持, 过渡, 家庭冲突" },
+      { id: 26, name: "权杖五", enName: "Five of Wands", meaning: "冲突, 竞争, 争论", reverse: "避免冲突, 解决分歧" },
+      { id: 27, name: "权杖六", enName: "Six of Wands", meaning: "胜利, 认可, 进步", reverse: "失败, 缺乏认可, 骄傲" },
+      { id: 28, name: "权杖七", enName: "Seven of Wands", meaning: "坚持, 挑战, 防御", reverse: "放弃, 不知所措, 屈服" },
+      { id: 29, name: "权杖八", enName: "Eight of Wands", meaning: "快速行动, 进展, 消息", reverse: "延迟, 挫折, 恐慌" },
+      { id: 30, name: "权杖九", enName: "Nine of Wands", meaning: "韧性, 坚持, 边界", reverse: "固执, 防御, 偏执" },
+      { id: 31, name: "权杖十", enName: "Ten of Wands", meaning: "负担, 责任, 努力", reverse: "无法承担, 逃避责任" },
+      { id: 32, name: "权杖侍从", enName: "Page of Wands", meaning: "探索, 热情, 消息", reverse: "坏消息, 缺乏方向, 拖延" },
+      { id: 33, name: "权杖骑士", enName: "Knight of Wands", meaning: "行动, 冒险, 激情", reverse: "冲动, 鲁莽, 延迟" },
+      { id: 34, name: "权杖王后", enName: "Queen of Wands", meaning: "自信, 热情, 魅力", reverse: "嫉妒, 不安全感, 自私" },
+      { id: 35, name: "权杖国王", enName: "King of Wands", meaning: "领导力, 远见, 企业家", reverse: "支配, 冲动, 固执" }
+    ],
+    cups: [
+      { id: 36, name: "圣杯王牌", enName: "Ace of Cups", meaning: "新情感, 爱, 直觉", reverse: "情感阻塞, 空虚, 失落" },
+      { id: 37, name: "圣杯二", enName: "Two of Cups", meaning: "结合, 伙伴关系, 吸引", reverse: "不平衡, 沟通不畅, 分离" },
+      { id: 38, name: "圣杯三", enName: "Three of Cups", meaning: "庆祝, 友谊, 团体", reverse: "过度放纵, 八卦, 孤立" },
+      { id: 39, name: "圣杯四", enName: "Four of Cups", meaning: "沉思, 不满足, 退缩", reverse: "接受机会, 觉醒, 错过" },
+      { id: 40, name: "圣杯五", enName: "Five of Cups", meaning: "失落, 遗憾, 失望", reverse: "接受, 前进, 找到和平" },
+      { id: 41, name: "圣杯六", enName: "Six of Cups", meaning: "怀旧, 纯真, 回忆", reverse: "活在过去, 成长困难" },
+      { id: 42, name: "圣杯七", enName: "Seven of Cups", meaning: "选择, 幻想, 白日梦", reverse: "缺乏目的, 困惑, 决定" },
+      { id: 43, name: "圣杯八", enName: "Eight of Cups", meaning: "离开, 寻求, 放弃", reverse: "停滞, 恐惧, 放弃" },
+      { id: 44, name: "圣杯九", enName: "Nine of Cups", meaning: "满足, 愿望成真", reverse: "过度放纵, 物质主义" },
+      { id: 45, name: "圣杯十", enName: "Ten of Cups", meaning: "和谐, 幸福, 家庭", reverse: "家庭冲突, 不和谐, 失望" },
+      { id: 46, name: "圣杯侍从", enName: "Page of Cups", meaning: "创意, 直觉, 消息", reverse: "情感不成熟, 创意阻塞" },
+      { id: 47, name: "圣杯骑士", enName: "Knight of Cups", meaning: "浪漫, 魅力, 想象力", reverse: "情绪化, 不切实际, 欺骗" },
+      { id: 48, name: "圣杯王后", enName: "Queen of Cups", meaning: "同情, 直觉, 关怀", reverse: "情感依赖, 不安全感" },
+      { id: 49, name: "圣杯国王", enName: "King of Cups", meaning: "平衡, 同情, 控制", reverse: "情绪控制问题, 操纵" }
+    ],
+    swords: [
+      { id: 50, name: "宝剑王牌", enName: "Ace of Swords", meaning: "突破, 清晰, 真理", reverse: "混乱, 破坏, 误导" },
+      { id: 51, name: "宝剑二", enName: "Two of Swords", meaning: "僵局, 困难选择", reverse: "优柔寡断, 困惑, 释放" },
+      { id: 52, name: "宝剑三", enName: "Three of Swords", meaning: "心碎, 悲伤, 痛苦", reverse: "恢复, 宽恕, 接受" },
+      { id: 53, name: "宝剑四", enName: "Four of Swords", meaning: "休息, 恢复, 沉思", reverse: "疲惫,  burnout, 重新进入" },
+      { id: 54, name: "宝剑五", enName: "Five of Swords", meaning: "冲突, 胜利有代价", reverse: "和解, 解决, 吸取教训" },
+      { id: 55, name: "宝剑六", enName: "Six of Swords", meaning: "过渡, 离开, 改善", reverse: "情感包袱, 停滞, 无法前进" },
+      { id: 56, name: "宝剑七", enName: "Seven of Swords", meaning: "欺骗, 策略, 秘密", reverse: "坦白, 真相, 良心" },
+      { id: 57, name: "宝剑八", enName: "Eight of Swords", meaning: "限制, 无力, 焦虑", reverse: "自由, 释放, 新视角" },
+      { id: 58, name: "宝剑九", enName: "Nine of Swords", meaning: "焦虑, 担忧, 恐惧", reverse: "希望, 克服恐惧, 恢复" },
+      { id: 59, name: "宝剑十", enName: "Ten of Swords", meaning: "结束, 背叛, 损失", reverse: "恢复, 重生, 不可避免的结束" },
+      { id: 60, name: "宝剑侍从", enName: "Page of Swords", meaning: "好奇心, 警觉, 想法", reverse: "欺骗, 操纵, 所有谈话" },
+      { id: 61, name: "宝剑骑士", enName: "Knight of Swords", meaning: "行动, 野心, 速度", reverse: "侵略, 冲动, 缺乏计划" },
+      { id: 62, name: "宝剑王后", enName: "Queen of Swords", meaning: "独立, 判断, 清晰", reverse: "痛苦,  bitterness, 不宽容" },
+      { id: 63, name: "宝剑国王", enName: "King of Swords", meaning: "智力, 真理, 权威", reverse: "操纵, 残忍, 滥用权力" }
+    ],
+    pentacles: [
+      { id: 64, name: "星币王牌", enName: "Ace of Pentacles", meaning: "新机会, 繁荣, 潜力", reverse: "错失机会, 缺乏规划" },
+      { id: 65, name: "星币二", enName: "Two of Pentacles", meaning: "平衡, 适应, 优先事项", reverse: "不平衡,  disorganization, 过度扩张" },
+      { id: 66, name: "星币三", enName: "Three of Pentacles", meaning: "团队合作, 协作, 学习", reverse: "缺乏团队合作,  disorganization" },
+      { id: 67, name: "星币四", enName: "Four of Pentacles", meaning: "保存, 安全, 控制", reverse: "贪婪, 物质主义, 放手" },
+      { id: 68, name: "星币五", enName: "Five of Pentacles", meaning: "困难, 贫困, 孤立", reverse: "恢复, 慈善, 进步" },
+      { id: 69, name: "星币六", enName: "Six of Pentacles", meaning: "慷慨, 慈善, 分享", reverse: "自私, 债务, 贪婪" },
+      { id: 70, name: "星币七", enName: "Seven of Pentacles", meaning: "耐心, 收获, 评估", reverse: "缺乏成长, 挫折, 不耐烦" },
+      { id: 71, name: "星币八", enName: "Eight of Pentacles", meaning: "技能, 工艺, 奉献", reverse: "缺乏激情, 无目的工作" },
+      { id: 72, name: "星币九", enName: "Nine of Pentacles", meaning: "丰富, 自给自足, 享受", reverse: "过度依赖, 虚假成功" },
+      { id: 73, name: "星币十", enName: "Ten of Pentacles", meaning: "财富, 遗产, 家庭", reverse: "家庭冲突, 不稳定, 失败" },
+      { id: 74, name: "星币侍从", enName: "Page of Pentacles", meaning: "野心, 欲望, 新技能", reverse: "缺乏进步,  procrastination" },
+      { id: 75, name: "星币骑士", enName: "Knight of Pentacles", meaning: "效率, 勤奋, 责任", reverse: "懒惰, 粗心, 不负责任" },
+      { id: 76, name: "星币王后", enName: "Queen of Pentacles", meaning: "繁荣, 安全, 养育", reverse: "物质主义, 自我中心, 嫉妒" },
+      { id: 77, name: "星币国王", enName: "King of Pentacles", meaning: "丰富, 安全, 领导", reverse: "贪婪, 物质主义, 腐败" }
+    ]
+  };
+  function getAllCards() {
+    return [
+      ...tarotDeck.major,
+      ...tarotDeck.wands,
+      ...tarotDeck.cups,
+      ...tarotDeck.swords,
+      ...tarotDeck.pentacles
+    ].map((card) => ({
+      ...card,
+      enName: card.enName || card.name
+      // 🔥 确保有 enName
+    }));
+  }
+  class TarotImageManager {
+    static getImagePath(card) {
+      const { id, enName } = card;
+      if (id <= 21) {
+        const number2 = id.toString().padStart(2, "0");
+        const name = enName.replace("The ", "").replace(/\s+/g, "_");
+        return `/static/tarot/RWS_Tarot_${number2}_${name}.jpg`;
+      }
+      let suit, number;
+      if (id >= 22 && id <= 35) {
+        suit = "Wands";
+        number = (id - 22 + 1).toString().padStart(2, "0");
+      } else if (id >= 36 && id <= 49) {
+        suit = "Cups";
+        number = (id - 36 + 1).toString().padStart(2, "0");
+      } else if (id >= 50 && id <= 63) {
+        suit = "Swords";
+        number = (id - 50 + 1).toString().padStart(2, "0");
+      } else if (id >= 64 && id <= 77) {
+        suit = "Pents";
+        number = (id - 64 + 1).toString().padStart(2, "0");
+      }
+      return `/static/tarot/${suit}${number}.jpg`;
+    }
+    // 批量给所有牌添加图片路径
+    static addImagesToDeck(deck) {
+      const allCards = [
+        ...deck.major,
+        ...deck.wands,
+        ...deck.cups,
+        ...deck.swords,
+        ...deck.pentacles
+      ];
+      return allCards.map((card) => ({
+        ...card,
+        imageUrl: this.getImagePath(card)
+      }));
+    }
+    // 牌背面
+    static getBackImage() {
+      return "/static/tarot/tarot_card_back.jpg";
+    }
+  }
+  const _sfc_main$c = {
     props: {
       card: {
         type: Object,
-        required: true
+        required: true,
+        default: () => ({
+          id: 0,
+          name: "",
+          enName: "",
+          meaning: "",
+          reverse: "",
+          imageUrl: "",
+          // 🔥 预留扩展字段
+          detailedAnalysis: "",
+          // 详细解析
+          symbolism: "",
+          // 符号象征
+          astrology: "",
+          // 占星对应
+          numerology: "",
+          // 数字意义
+          element: ""
+          // 元素属性
+        })
       },
       reversed: {
         type: Boolean,
@@ -10918,80 +11090,264 @@ ${o3}
       spreadDescription: {
         type: String,
         default: ""
+      },
+      autoFlip: {
+        type: Boolean,
+        default: true
+      },
+      // 🔥 预留：更多解析的回调函数
+      onMoreAnalysis: {
+        type: Function,
+        default: null
       }
     },
     data() {
       return {
-        isReversed: this.reversed
+        showFront: this.autoFlip,
+        showReversed: this.reversed,
+        imageError: false,
+        backImageUrl: TarotImageManager.getBackImage(),
+        displayMode: "image",
+        // 'image' 或 'text'
+        showDetails: false
+        // 是否显示详细解析
       };
     },
     computed: {
       currentMeaning() {
-        return this.isReversed ? this.card.reverse : this.card.meaning;
+        return this.reversed ? this.card.reverse : this.card.meaning;
+      }
+    },
+    methods: {
+      handleClick() {
+        if (!this.showFront) {
+          this.showFront = true;
+          this.$emit("flip", this.card);
+        }
+      },
+      // 🔥 切换到文字模式
+      switchToText() {
+        this.displayMode = "text";
+        this.$emit("mode-change", { mode: "text", card: this.card });
+      },
+      // 🔥 切换到图片模式
+      switchToImage() {
+        this.displayMode = "image";
+        this.showDetails = false;
+        this.$emit("mode-change", { mode: "image", card: this.card });
+      },
+      // 🔥 切换详细解析显示
+      toggleDetails() {
+        this.showDetails = !this.showDetails;
+        this.$emit("detail-toggle", {
+          showDetails: this.showDetails,
+          card: this.card
+        });
+      },
+      // 🔥 处理更多解析
+      handleMoreAnalysis() {
+        if (this.onMoreAnalysis) {
+          this.onMoreAnalysis(this.card);
+        } else {
+          this.$emit("more-analysis", this.card);
+        }
+      },
+      onImageError() {
+        this.imageError = true;
+        this.displayMode = "text";
+        formatAppLog("warn", "at components/tarot-card/tarot-card.vue:194", "图片加载失败:", this.card.imageUrl);
+      },
+      reset() {
+        this.showFront = this.autoFlip;
+        this.showReversed = this.reversed;
+        this.imageError = false;
+        this.displayMode = "image";
+        this.showDetails = false;
+      }
+    },
+    watch: {
+      card() {
+        this.reset();
+      },
+      reversed(newVal) {
+        this.showReversed = newVal;
       }
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "tarot-card" }, [
-      vue.createElementVNode("view", { class: "card-content" }, [
-        vue.createElementVNode("view", { class: "card-header" }, [
-          vue.createElementVNode(
-            "text",
-            { class: "card-name" },
-            vue.toDisplayString($props.card.name),
-            1
-            /* TEXT */
-          ),
-          $data.isReversed ? (vue.openBlock(), vue.createElementBlock("text", {
-            key: 0,
-            class: "card-reversed"
-          }, "🔁 逆位")) : (vue.openBlock(), vue.createElementBlock("text", {
-            key: 1,
-            class: "card-upright"
-          }, "⬆️ 正位"))
-        ]),
-        $props.spreadPosition ? (vue.openBlock(), vue.createElementBlock("view", {
-          key: 0,
-          class: "spread-position"
-        }, [
-          vue.createElementVNode(
-            "text",
-            { class: "position-title" },
-            vue.toDisplayString($props.spreadPosition),
-            1
-            /* TEXT */
-          ),
-          vue.createElementVNode(
-            "text",
-            { class: "position-desc" },
-            vue.toDisplayString($props.spreadDescription),
-            1
-            /* TEXT */
-          )
-        ])) : vue.createCommentVNode("v-if", true),
-        vue.createElementVNode("view", { class: "card-meaning" }, [
-          vue.createElementVNode(
-            "text",
-            { class: "meaning-text" },
-            vue.toDisplayString($options.currentMeaning),
-            1
-            /* TEXT */
-          )
-        ]),
-        vue.createElementVNode("view", { class: "card-footer" }, [
-          vue.createElementVNode(
-            "text",
-            { class: "english-name" },
-            vue.toDisplayString($props.card.enName),
-            1
-            /* TEXT */
-          )
-        ])
-      ])
+      vue.createElementVNode(
+        "view",
+        {
+          class: vue.normalizeClass(["card-inner", { reversed: $data.showReversed }])
+        },
+        [
+          vue.withDirectives(vue.createElementVNode(
+            "view",
+            { class: "card-back" },
+            [
+              $data.backImageUrl ? (vue.openBlock(), vue.createElementBlock("image", {
+                key: 0,
+                src: $data.backImageUrl,
+                class: "card-image back-image",
+                mode: "aspectFit"
+              }, null, 8, ["src"])) : (vue.openBlock(), vue.createElementBlock("text", {
+                key: 1,
+                class: "card-back-icon"
+              }, "🔮"))
+            ],
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vShow, !$data.showFront]
+          ]),
+          vue.withDirectives(vue.createElementVNode(
+            "view",
+            { class: "card-front" },
+            [
+              vue.withDirectives(vue.createElementVNode(
+                "view",
+                { class: "image-mode" },
+                [
+                  $props.card.imageUrl ? (vue.openBlock(), vue.createElementBlock("image", {
+                    key: 0,
+                    src: $props.card.imageUrl,
+                    class: vue.normalizeClass(["card-image front-image", { "reversed-image": $props.reversed }]),
+                    mode: "aspectFit",
+                    onClick: _cache[0] || (_cache[0] = (...args) => $options.switchToText && $options.switchToText(...args)),
+                    onError: _cache[1] || (_cache[1] = (...args) => $options.onImageError && $options.onImageError(...args)),
+                    onLoad: _cache[2] || (_cache[2] = (...args) => _ctx.onImageLoad && _ctx.onImageLoad(...args))
+                  }, null, 42, ["src"])) : vue.createCommentVNode("v-if", true),
+                  vue.createElementVNode("view", {
+                    class: "click-hint",
+                    onClick: _cache[3] || (_cache[3] = (...args) => $options.switchToText && $options.switchToText(...args))
+                  }, [
+                    vue.createElementVNode("text", null, "👆 点击查看牌义")
+                  ])
+                ],
+                512
+                /* NEED_PATCH */
+              ), [
+                [vue.vShow, $data.displayMode === "image"]
+              ]),
+              vue.withDirectives(vue.createElementVNode(
+                "view",
+                { class: "text-mode" },
+                [
+                  vue.createElementVNode("view", { class: "text-content" }, [
+                    vue.createElementVNode("view", { class: "card-header" }, [
+                      vue.createElementVNode(
+                        "text",
+                        { class: "card-name" },
+                        vue.toDisplayString($props.card.name),
+                        1
+                        /* TEXT */
+                      ),
+                      $props.reversed ? (vue.openBlock(), vue.createElementBlock("text", {
+                        key: 0,
+                        class: "card-reversed"
+                      }, "🔁 逆位")) : (vue.openBlock(), vue.createElementBlock("text", {
+                        key: 1,
+                        class: "card-upright"
+                      }, "⬆️ 正位"))
+                    ]),
+                    $props.spreadPosition ? (vue.openBlock(), vue.createElementBlock("view", {
+                      key: 0,
+                      class: "spread-position"
+                    }, [
+                      vue.createElementVNode(
+                        "text",
+                        { class: "position-title" },
+                        vue.toDisplayString($props.spreadPosition),
+                        1
+                        /* TEXT */
+                      ),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "position-desc" },
+                        vue.toDisplayString($props.spreadDescription),
+                        1
+                        /* TEXT */
+                      )
+                    ])) : vue.createCommentVNode("v-if", true),
+                    vue.createElementVNode("view", { class: "meaning-section" }, [
+                      vue.createElementVNode("text", { class: "section-title" }, "核心含义"),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "meaning-text" },
+                        vue.toDisplayString($options.currentMeaning),
+                        1
+                        /* TEXT */
+                      )
+                    ]),
+                    $data.showDetails ? (vue.openBlock(), vue.createElementBlock("view", {
+                      key: 1,
+                      class: "detail-section"
+                    }, [
+                      vue.createElementVNode("text", { class: "section-title" }, "详细解析"),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "detail-text" },
+                        vue.toDisplayString($props.card.detailedAnalysis || "暂无详细解析"),
+                        1
+                        /* TEXT */
+                      )
+                    ])) : vue.createCommentVNode("v-if", true),
+                    $props.card.symbolism ? (vue.openBlock(), vue.createElementBlock("view", {
+                      key: 2,
+                      class: "symbol-section"
+                    }, [
+                      vue.createElementVNode("text", { class: "section-title" }, "符号象征"),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "symbol-text" },
+                        vue.toDisplayString($props.card.symbolism),
+                        1
+                        /* TEXT */
+                      )
+                    ])) : vue.createCommentVNode("v-if", true)
+                  ]),
+                  vue.createElementVNode("view", { class: "action-buttons" }, [
+                    vue.createElementVNode("button", {
+                      class: "mode-btn",
+                      onClick: _cache[4] || (_cache[4] = (...args) => $options.switchToImage && $options.switchToImage(...args))
+                    }, "📷 查看图片"),
+                    vue.createElementVNode(
+                      "button",
+                      {
+                        class: "detail-btn",
+                        onClick: _cache[5] || (_cache[5] = (...args) => $options.toggleDetails && $options.toggleDetails(...args))
+                      },
+                      vue.toDisplayString($data.showDetails ? "收起" : "展开") + "详解 ",
+                      1
+                      /* TEXT */
+                    ),
+                    $props.onMoreAnalysis ? (vue.openBlock(), vue.createElementBlock("button", {
+                      key: 0,
+                      class: "more-btn",
+                      onClick: _cache[6] || (_cache[6] = (...args) => $options.handleMoreAnalysis && $options.handleMoreAnalysis(...args))
+                    }, " 更多解析 ")) : vue.createCommentVNode("v-if", true)
+                  ])
+                ],
+                512
+                /* NEED_PATCH */
+              ), [
+                [vue.vShow, $data.displayMode === "text"]
+              ])
+            ],
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vShow, $data.showFront]
+          ])
+        ],
+        2
+        /* CLASS */
+      )
     ]);
   }
-  const TarotCard = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-6b21b682"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/tarot-card/tarot-card.vue"]]);
-  const _sfc_main$a = {
+  const TarotCard = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-6b21b682"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/tarot-card/tarot-card.vue"]]);
+  const _sfc_main$b = {
     name: "DrawResult",
     components: {
       TarotCard
@@ -11007,7 +11363,7 @@ ${o3}
       }
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_tarot_card = resolveEasycom(vue.resolveDynamicComponent("tarot-card"), TarotCard);
     return vue.openBlock(), vue.createElementBlock("view", { class: "draw-result" }, [
       $props.spreadConfig ? (vue.openBlock(), vue.createElementBlock("view", {
@@ -11071,7 +11427,327 @@ ${o3}
       ])
     ]);
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-5d4076ac"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/draw-result/draw-result.vue"]]);
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-5d4076ac"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/draw-result/draw-result.vue"]]);
+  class ShareManager {
+    // 🔥 修复：正确显示提示词
+    static generateShareContent(cards, question = "", seed = "", promptType = "basic") {
+      const prompt = this.defaultPrompts[promptType] || this.defaultPrompts.basic;
+      const cardsText = cards.map((cardData) => {
+        const position = cardData.spreadPosition ? `【${cardData.spreadPosition}】` : "";
+        const reverseText = cardData.isReversed ? "逆位" : "正位";
+        return `${position} ${cardData.card.name} ${reverseText}`;
+      }).join("\n");
+      let shareContent = `🔮 塔罗牌抽牌结果
+
+`;
+      if (question) {
+        shareContent += `问题: ${question}
+
+`;
+      }
+      shareContent += `抽牌结果:
+${cardsText}
+
+`;
+      shareContent += `--- AI解读提示词 ---
+`;
+      shareContent += this._replacePromptPlaceholders(prompt, question, cardsText);
+      shareContent += `
+---
+`;
+      shareContent += `种子: ${seed}
+`;
+      shareContent += `时间: ${(/* @__PURE__ */ new Date()).toLocaleString()}`;
+      return shareContent;
+    }
+    // 生成纯文本结果
+    static generateSimpleResult(cards, question = "") {
+      let content = `🎴 塔罗牌抽牌结果
+
+`;
+      if (question) {
+        content += `问题: ${question}
+
+`;
+      }
+      content += `抽到的牌:
+`;
+      cards.forEach((cardData, index) => {
+        const position = cardData.spreadPosition ? `【${cardData.spreadPosition}】` : "";
+        const reverseText = cardData.isReversed ? "🔁 逆位" : "⬆️ 正位";
+        content += `${index + 1}. ${position} ${cardData.card.name} ${reverseText}
+`;
+        content += `   含义: ${cardData.isReversed ? cardData.card.reverse : cardData.card.meaning}
+
+`;
+      });
+      return content;
+    }
+    // 替换提示词中的占位符
+    static _replacePromptPlaceholders(prompt, question, cardsText) {
+      return prompt.replace(/{question}/g, question || "暂无特定问题").replace(/{cards}/g, cardsText);
+    }
+    // 获取可用的提示词类型
+    static getAvailablePrompts() {
+      return Object.keys(this.defaultPrompts).map((key) => ({
+        value: key,
+        label: this._getPromptLabel(key),
+        description: this.defaultPrompts[key].substring(0, 50) + "..."
+      }));
+    }
+    static _getPromptLabel(key) {
+      const labels = {
+        basic: "基础解读",
+        detailed: "详细分析",
+        aiOptimized: "AI优化版"
+      };
+      return labels[key] || key;
+    }
+    // 预留接口：添加自定义提示词
+    static addCustomPrompt(key, content) {
+      this.defaultPrompts[key] = content;
+    }
+    // 预留接口：获取所有提示词
+    static getAllPrompts() {
+      return this.defaultPrompts;
+    }
+  }
+  // 默认提示词模板
+  __publicField(ShareManager, "defaultPrompts", {
+    basic: `请为以下塔罗牌组合提供专业解读：`,
+    detailed: `作为专业塔罗师，请分析以下牌阵：
+- 结合每张牌的正逆位含义
+- 分析牌阵的整体能量流动  
+- 给出具体的建议和启示
+- 用温暖而专业的语言回复`,
+    aiOptimized: `# 塔罗牌解读请求
+
+## 背景信息
+{question}
+
+## 抽牌结果
+{cards}
+
+## 解读要求
+1. 分析每张牌在当前位置的意义
+2. 解读正逆位对含义的影响
+3. 分析牌阵的整体故事线
+4. 给出具体的生活建议
+5. 用温暖、鼓励的语气回复
+
+请开始解读：`
+  });
+  const _sfc_main$a = {
+    name: "ShareDialog",
+    data() {
+      return {
+        selectedFormat: "simple",
+        selectedPrompt: "basic",
+        shareFormats: [
+          { value: "simple", label: "简洁版", description: "仅包含牌面信息" },
+          { value: "withPrompt", label: "AI解读版", description: "包含AI提示词，便于生成解读" }
+        ],
+        promptOptions: []
+      };
+    },
+    computed: {
+      selectedPromptLabel() {
+        const prompt = this.promptOptions.find((p2) => p2.value === this.selectedPrompt);
+        return prompt ? prompt.label : "选择提示词";
+      },
+      shareContentPreview() {
+        if (!this.cards || this.cards.length === 0)
+          return "暂无数据";
+        if (this.selectedFormat === "simple") {
+          return ShareManager.generateSimpleResult(this.cards, this.question);
+        } else {
+          return ShareManager.generateShareContent(
+            this.cards,
+            this.question,
+            this.seed,
+            this.selectedPrompt
+          );
+        }
+      }
+    },
+    methods: {
+      open(cards, question, seed) {
+        this.cards = cards;
+        this.question = question || "";
+        this.seed = seed;
+        this.promptOptions = ShareManager.getAvailablePrompts();
+        this.$refs.sharePopup.open();
+      },
+      closeDialog() {
+        this.$refs.sharePopup.close();
+      },
+      onFormatChange(e2) {
+        this.selectedFormat = e2.detail.value;
+      },
+      onPromptChange(e2) {
+        const index = e2.detail.value;
+        this.selectedPrompt = this.promptOptions[index].value;
+      },
+      confirmShare() {
+        let shareContent;
+        if (this.selectedFormat === "simple") {
+          shareContent = ShareManager.generateSimpleResult(this.cards, this.question);
+        } else {
+          shareContent = ShareManager.generateShareContent(
+            this.cards,
+            this.question,
+            this.seed,
+            this.selectedPrompt
+          );
+        }
+        uni.setClipboardData({
+          data: shareContent,
+          success: () => {
+            uni.showToast({
+              title: "已复制到剪贴板",
+              icon: "success"
+            });
+            this.closeDialog();
+          },
+          fail: () => {
+            uni.showToast({
+              title: "复制失败",
+              icon: "error"
+            });
+          }
+        });
+      }
+    }
+  };
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
+    const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_0);
+    return vue.openBlock(), vue.createBlock(
+      _component_uni_popup,
+      {
+        ref: "sharePopup",
+        type: "bottom",
+        "background-color": "#fff"
+      },
+      {
+        default: vue.withCtx(() => [
+          vue.createElementVNode("view", { class: "share-dialog" }, [
+            vue.createElementVNode("view", { class: "dialog-header" }, [
+              vue.createElementVNode("text", { class: "dialog-title" }, "分享抽牌结果"),
+              vue.createVNode(_component_uni_icons, {
+                type: "close",
+                size: "24",
+                color: "#666",
+                onClick: $options.closeDialog
+              }, null, 8, ["onClick"])
+            ]),
+            vue.createElementVNode("view", { class: "share-options" }, [
+              vue.createElementVNode("text", { class: "section-title" }, "分享格式"),
+              vue.createElementVNode(
+                "radio-group",
+                {
+                  onChange: _cache[0] || (_cache[0] = (...args) => $options.onFormatChange && $options.onFormatChange(...args))
+                },
+                [
+                  (vue.openBlock(true), vue.createElementBlock(
+                    vue.Fragment,
+                    null,
+                    vue.renderList($data.shareFormats, (format) => {
+                      return vue.openBlock(), vue.createElementBlock("view", {
+                        class: "option-item",
+                        key: format.value
+                      }, [
+                        vue.createElementVNode("radio", {
+                          value: format.value,
+                          checked: $data.selectedFormat === format.value,
+                          color: "#8B4513"
+                        }, null, 8, ["value", "checked"]),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "option-label" },
+                          vue.toDisplayString(format.label),
+                          1
+                          /* TEXT */
+                        ),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "option-desc" },
+                          vue.toDisplayString(format.description),
+                          1
+                          /* TEXT */
+                        )
+                      ]);
+                    }),
+                    128
+                    /* KEYED_FRAGMENT */
+                  ))
+                ],
+                32
+                /* NEED_HYDRATION */
+              )
+            ]),
+            $data.selectedFormat === "withPrompt" ? (vue.openBlock(), vue.createElementBlock("view", {
+              key: 0,
+              class: "prompt-options"
+            }, [
+              vue.createElementVNode("text", { class: "section-title" }, "AI提示词模板"),
+              vue.createElementVNode("picker", {
+                value: $data.selectedPrompt,
+                range: $data.promptOptions,
+                "range-key": "label",
+                onChange: _cache[1] || (_cache[1] = (...args) => $options.onPromptChange && $options.onPromptChange(...args))
+              }, [
+                vue.createElementVNode("view", { class: "picker-trigger" }, [
+                  vue.createElementVNode(
+                    "text",
+                    null,
+                    vue.toDisplayString($options.selectedPromptLabel),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createVNode(_component_uni_icons, {
+                    type: "arrowdown",
+                    size: "16",
+                    color: "#666"
+                  })
+                ])
+              ], 40, ["value", "range"])
+            ])) : vue.createCommentVNode("v-if", true),
+            vue.createElementVNode("view", { class: "preview-section" }, [
+              vue.createElementVNode("text", { class: "section-title" }, "预览"),
+              vue.createElementVNode("scroll-view", {
+                "scroll-y": "",
+                class: "preview-content"
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "preview-text" },
+                  vue.toDisplayString($options.shareContentPreview),
+                  1
+                  /* TEXT */
+                )
+              ])
+            ]),
+            vue.createElementVNode("view", { class: "action-buttons" }, [
+              vue.createElementVNode("button", {
+                class: "cancel-btn",
+                onClick: _cache[2] || (_cache[2] = (...args) => $options.closeDialog && $options.closeDialog(...args))
+              }, "取消"),
+              vue.createElementVNode("button", {
+                class: "confirm-btn",
+                onClick: _cache[3] || (_cache[3] = (...args) => $options.confirmShare && $options.confirmShare(...args))
+              }, "复制内容")
+            ])
+          ])
+        ]),
+        _: 1
+        /* STABLE */
+      },
+      512
+      /* NEED_PATCH */
+    );
+  }
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-277d715a"], ["__file", "C:/Users/12131/Desktop/tarrotGenerate/components/share-dialog/share-dialog.vue"]]);
   const _sfc_main$9 = {
     name: "UniSection",
     emits: ["click"],
@@ -11813,7 +12489,7 @@ ${o3}
     }
   };
   function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), UniIcons);
     const _component_uni_badge = resolveEasycom(vue.resolveDynamicComponent("uni-badge"), __easycom_1);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: vue.normalizeClass([{ "uni-list-item--disabled": $props.disabled }, "uni-list-item"]),
@@ -12264,14 +12940,6 @@ ${o3}
       return this.seed;
     }
   }
-  formatAppLog("log", "at utils/random.js:197", "🧪 测试固定正逆位算法...");
-  const testRandom = new AdvancedRandomGenerator(12345);
-  const testResult = testRandom.testPositionDistribution(1e3);
-  if (testResult.deviation < 5) {
-    formatAppLog("log", "at utils/random.js:202", "✅ 正逆位算法测试通过！");
-  } else {
-    formatAppLog("warn", "at utils/random.js:204", "⚠️ 正逆位算法需要优化");
-  }
   class SeedGenerator {
     // 数字种子
     static fromNumber(num) {
@@ -12326,105 +12994,6 @@ ${o3}
       };
     }
   }
-  const tarotDeck = {
-    major: [
-      { id: 0, name: "愚人", enName: "The Fool", meaning: "新的开始, 冒险, 天真", reverse: "鲁莽, 冒险, 犹豫不决" },
-      { id: 1, name: "魔术师", enName: "The Magician", meaning: "能力, 资源, 创造力", reverse: "欺骗, 未开发潜能, 操纵" },
-      { id: 2, name: "女祭司", enName: "The High Priestess", meaning: "直觉, 神秘, 潜意识", reverse: "隐藏, 肤浅, 忽略直觉" },
-      { id: 3, name: "女皇", enName: "The Empress", meaning: "丰饶, 养育, 感官享受", reverse: "依赖, 停滞, 过度保护" },
-      { id: 4, name: "皇帝", enName: "The Emperor", meaning: "权威, 结构, 控制", reverse: "僵化, 控制欲, 无力" },
-      { id: 5, name: "教皇", enName: "The Hierophant", meaning: "传统, 信仰, 教育", reverse: "反叛, 非传统, 新方法" },
-      { id: 6, name: "恋人", enName: "The Lovers", meaning: "选择, 关系, 价值观", reverse: "不和谐, 错误选择, 冲突" },
-      { id: 7, name: "战车", enName: "The Chariot", meaning: "控制, 意志力, 胜利", reverse: "缺乏方向, 失控, 侵略" },
-      { id: 8, name: "力量", enName: "Strength", meaning: "勇气, 耐心, 内在力量", reverse: "自我怀疑, 软弱, 滥用力量" },
-      { id: 9, name: "隐士", enName: "The Hermit", meaning: "内省, 寻求, 指引", reverse: "孤独, 孤立, 拒绝帮助" },
-      { id: 10, name: "命运之轮", enName: "Wheel of Fortune", meaning: "转折点, 命运, 循环", reverse: "坏运气, 抵抗变化, 外部控制" },
-      { id: 11, name: "正义", enName: "Justice", meaning: "公平, 真相, 因果", reverse: "不公正, 偏见, 责任逃避" },
-      { id: 12, name: "倒吊人", enName: "The Hanged Man", meaning: "牺牲, 新视角, 暂停", reverse: "停滞, 不必要的牺牲, 抗拒" },
-      { id: 13, name: "死神", enName: "Death", meaning: "结束, 转变, 新生", reverse: "抗拒改变, 停滞, 恐惧" },
-      { id: 14, name: "节制", enName: "Temperance", meaning: "平衡, 调和, 耐心", reverse: "不平衡, 极端, 缺乏和谐" },
-      { id: 15, name: "恶魔", enName: "The Devil", meaning: "束缚, 物质主义, 欲望", reverse: "解脱, 释放, 理解" },
-      { id: 16, name: "高塔", enName: "The Tower", meaning: "突然变化, 启示, 觉醒", reverse: "害怕改变, 灾难避免, 拖延" },
-      { id: 17, name: "星星", enName: "The Star", meaning: "希望, 灵感, 宁静", reverse: "绝望, 失去信心, 失望" },
-      { id: 18, name: "月亮", enName: "The Moon", meaning: "幻觉, 恐惧, 潜意识", reverse: "释放恐惧, 理解, 内心平静" },
-      { id: 19, name: "太阳", enName: "The Sun", meaning: "快乐, 成功, 活力", reverse: "暂时挫折, 成功延迟" },
-      { id: 20, name: "审判", enName: "Judgement", meaning: "觉醒, 重生, 召唤", reverse: "自我怀疑, 拒绝召唤, 后悔" },
-      { id: 21, name: "世界", enName: "The World", meaning: "完成, 成就, 旅行", reverse: "未完成, 缺乏完成, 需要反思" }
-    ],
-    wands: [
-      { id: 22, name: "权杖王牌", enName: "Ace of Wands", meaning: "新机会, 灵感, 潜力", reverse: "延迟, 未实现潜力, 缺乏激情" },
-      { id: 23, name: "权杖二", enName: "Two of Wands", meaning: "规划, 决定, 发现", reverse: "害怕未知, 糟糕的规划" },
-      { id: 24, name: "权杖三", enName: "Three of Wands", meaning: "准备, 远见, 扩张", reverse: "延迟, 障碍, 挫折" },
-      { id: 25, name: "权杖四", enName: "Four of Wands", meaning: "庆祝, 和谐, 婚姻", reverse: "缺乏支持, 过渡, 家庭冲突" },
-      { id: 26, name: "权杖五", enName: "Five of Wands", meaning: "冲突, 竞争, 争论", reverse: "避免冲突, 解决分歧" },
-      { id: 27, name: "权杖六", enName: "Six of Wands", meaning: "胜利, 认可, 进步", reverse: "失败, 缺乏认可, 骄傲" },
-      { id: 28, name: "权杖七", enName: "Seven of Wands", meaning: "坚持, 挑战, 防御", reverse: "放弃, 不知所措, 屈服" },
-      { id: 29, name: "权杖八", enName: "Eight of Wands", meaning: "快速行动, 进展, 消息", reverse: "延迟, 挫折, 恐慌" },
-      { id: 30, name: "权杖九", enName: "Nine of Wands", meaning: "韧性, 坚持, 边界", reverse: "固执, 防御, 偏执" },
-      { id: 31, name: "权杖十", enName: "Ten of Wands", meaning: "负担, 责任, 努力", reverse: "无法承担, 逃避责任" },
-      { id: 32, name: "权杖侍从", enName: "Page of Wands", meaning: "探索, 热情, 消息", reverse: "坏消息, 缺乏方向, 拖延" },
-      { id: 33, name: "权杖骑士", enName: "Knight of Wands", meaning: "行动, 冒险, 激情", reverse: "冲动, 鲁莽, 延迟" },
-      { id: 34, name: "权杖王后", enName: "Queen of Wands", meaning: "自信, 热情, 魅力", reverse: "嫉妒, 不安全感, 自私" },
-      { id: 35, name: "权杖国王", enName: "King of Wands", meaning: "领导力, 远见, 企业家", reverse: "支配, 冲动, 固执" }
-    ],
-    cups: [
-      { id: 36, name: "圣杯王牌", enName: "Ace of Cups", meaning: "新情感, 爱, 直觉", reverse: "情感阻塞, 空虚, 失落" },
-      { id: 37, name: "圣杯二", enName: "Two of Cups", meaning: "结合, 伙伴关系, 吸引", reverse: "不平衡, 沟通不畅, 分离" },
-      { id: 38, name: "圣杯三", enName: "Three of Cups", meaning: "庆祝, 友谊, 团体", reverse: "过度放纵, 八卦, 孤立" },
-      { id: 39, name: "圣杯四", enName: "Four of Cups", meaning: "沉思, 不满足, 退缩", reverse: "接受机会, 觉醒, 错过" },
-      { id: 40, name: "圣杯五", enName: "Five of Cups", meaning: "失落, 遗憾, 失望", reverse: "接受, 前进, 找到和平" },
-      { id: 41, name: "圣杯六", enName: "Six of Cups", meaning: "怀旧, 纯真, 回忆", reverse: "活在过去, 成长困难" },
-      { id: 42, name: "圣杯七", enName: "Seven of Cups", meaning: "选择, 幻想, 白日梦", reverse: "缺乏目的, 困惑, 决定" },
-      { id: 43, name: "圣杯八", enName: "Eight of Cups", meaning: "离开, 寻求, 放弃", reverse: "停滞, 恐惧, 放弃" },
-      { id: 44, name: "圣杯九", enName: "Nine of Cups", meaning: "满足, 愿望成真", reverse: "过度放纵, 物质主义" },
-      { id: 45, name: "圣杯十", enName: "Ten of Cups", meaning: "和谐, 幸福, 家庭", reverse: "家庭冲突, 不和谐, 失望" },
-      { id: 46, name: "圣杯侍从", enName: "Page of Cups", meaning: "创意, 直觉, 消息", reverse: "情感不成熟, 创意阻塞" },
-      { id: 47, name: "圣杯骑士", enName: "Knight of Cups", meaning: "浪漫, 魅力, 想象力", reverse: "情绪化, 不切实际, 欺骗" },
-      { id: 48, name: "圣杯王后", enName: "Queen of Cups", meaning: "同情, 直觉, 关怀", reverse: "情感依赖, 不安全感" },
-      { id: 49, name: "圣杯国王", enName: "King of Cups", meaning: "平衡, 同情, 控制", reverse: "情绪控制问题, 操纵" }
-    ],
-    swords: [
-      { id: 50, name: "宝剑王牌", enName: "Ace of Swords", meaning: "突破, 清晰, 真理", reverse: "混乱, 破坏, 误导" },
-      { id: 51, name: "宝剑二", enName: "Two of Swords", meaning: "僵局, 困难选择", reverse: "优柔寡断, 困惑, 释放" },
-      { id: 52, name: "宝剑三", enName: "Three of Swords", meaning: "心碎, 悲伤, 痛苦", reverse: "恢复, 宽恕, 接受" },
-      { id: 53, name: "宝剑四", enName: "Four of Swords", meaning: "休息, 恢复, 沉思", reverse: "疲惫,  burnout, 重新进入" },
-      { id: 54, name: "宝剑五", enName: "Five of Swords", meaning: "冲突, 胜利有代价", reverse: "和解, 解决, 吸取教训" },
-      { id: 55, name: "宝剑六", enName: "Six of Swords", meaning: "过渡, 离开, 改善", reverse: "情感包袱, 停滞, 无法前进" },
-      { id: 56, name: "宝剑七", enName: "Seven of Swords", meaning: "欺骗, 策略, 秘密", reverse: "坦白, 真相, 良心" },
-      { id: 57, name: "宝剑八", enName: "Eight of Swords", meaning: "限制, 无力, 焦虑", reverse: "自由, 释放, 新视角" },
-      { id: 58, name: "宝剑九", enName: "Nine of Swords", meaning: "焦虑, 担忧, 恐惧", reverse: "希望, 克服恐惧, 恢复" },
-      { id: 59, name: "宝剑十", enName: "Ten of Swords", meaning: "结束, 背叛, 损失", reverse: "恢复, 重生, 不可避免的结束" },
-      { id: 60, name: "宝剑侍从", enName: "Page of Swords", meaning: "好奇心, 警觉, 想法", reverse: "欺骗, 操纵, 所有谈话" },
-      { id: 61, name: "宝剑骑士", enName: "Knight of Swords", meaning: "行动, 野心, 速度", reverse: "侵略, 冲动, 缺乏计划" },
-      { id: 62, name: "宝剑王后", enName: "Queen of Swords", meaning: "独立, 判断, 清晰", reverse: "痛苦,  bitterness, 不宽容" },
-      { id: 63, name: "宝剑国王", enName: "King of Swords", meaning: "智力, 真理, 权威", reverse: "操纵, 残忍, 滥用权力" }
-    ],
-    pentacles: [
-      { id: 64, name: "星币王牌", enName: "Ace of Pentacles", meaning: "新机会, 繁荣, 潜力", reverse: "错失机会, 缺乏规划" },
-      { id: 65, name: "星币二", enName: "Two of Pentacles", meaning: "平衡, 适应, 优先事项", reverse: "不平衡,  disorganization, 过度扩张" },
-      { id: 66, name: "星币三", enName: "Three of Pentacles", meaning: "团队合作, 协作, 学习", reverse: "缺乏团队合作,  disorganization" },
-      { id: 67, name: "星币四", enName: "Four of Pentacles", meaning: "保存, 安全, 控制", reverse: "贪婪, 物质主义, 放手" },
-      { id: 68, name: "星币五", enName: "Five of Pentacles", meaning: "困难, 贫困, 孤立", reverse: "恢复, 慈善, 进步" },
-      { id: 69, name: "星币六", enName: "Six of Pentacles", meaning: "慷慨, 慈善, 分享", reverse: "自私, 债务, 贪婪" },
-      { id: 70, name: "星币七", enName: "Seven of Pentacles", meaning: "耐心, 收获, 评估", reverse: "缺乏成长, 挫折, 不耐烦" },
-      { id: 71, name: "星币八", enName: "Eight of Pentacles", meaning: "技能, 工艺, 奉献", reverse: "缺乏激情, 无目的工作" },
-      { id: 72, name: "星币九", enName: "Nine of Pentacles", meaning: "丰富, 自给自足, 享受", reverse: "过度依赖, 虚假成功" },
-      { id: 73, name: "星币十", enName: "Ten of Pentacles", meaning: "财富, 遗产, 家庭", reverse: "家庭冲突, 不稳定, 失败" },
-      { id: 74, name: "星币侍从", enName: "Page of Pentacles", meaning: "野心, 欲望, 新技能", reverse: "缺乏进步,  procrastination" },
-      { id: 75, name: "星币骑士", enName: "Knight of Pentacles", meaning: "效率, 勤奋, 责任", reverse: "懒惰, 粗心, 不负责任" },
-      { id: 76, name: "星币王后", enName: "Queen of Pentacles", meaning: "繁荣, 安全, 养育", reverse: "物质主义, 自我中心, 嫉妒" },
-      { id: 77, name: "星币国王", enName: "King of Pentacles", meaning: "丰富, 安全, 领导", reverse: "贪婪, 物质主义, 腐败" }
-    ]
-  };
-  function getAllCards() {
-    return [
-      ...tarotDeck.major,
-      ...tarotDeck.wands,
-      ...tarotDeck.cups,
-      ...tarotDeck.swords,
-      ...tarotDeck.pentacles
-    ];
-  }
   const _sfc_main$2 = {
     components: {
       UniSection: __easycom_5,
@@ -12433,14 +13002,15 @@ ${o3}
       UniListItem,
       UniGrid,
       UniGridItem,
-      UniIcons: __easycom_4$2,
+      UniIcons,
       UniTag,
       UniLoadMore: __easycom_6,
       UniPopup: __easycom_0,
       DrawSettings: __easycom_0$3,
       SeedInput: __easycom_2,
       TarotCard,
-      DrawResult: __easycom_3
+      DrawResult: __easycom_3,
+      ShareDialog: __easycom_4
     },
     data() {
       return {
@@ -12455,11 +13025,29 @@ ${o3}
       };
     },
     methods: {
+      // 打开分享对话框
+      openShareDialog() {
+        const question = this.$refs.seedInput ? this.$refs.seedInput.getQuestion() : "";
+        this.$refs.shareDialog.open(
+          this.drawnCards,
+          question,
+          // 🔥 现在能正确获取问题文本了
+          this.currentSeed
+        );
+      },
+      // 处理问题种子变更
+      handleQuestionChange(question) {
+        this.question = question;
+        if (question) {
+          this.currentSeed = SeedGenerator.fromQuestion(question);
+          this.updateRandomParams();
+        }
+      },
       // 抽牌设置变更
       onDrawSettingsChange(settings) {
         this.drawSettings = settings;
         this.updateRandomParams();
-        formatAppLog("log", "at pages/index/index.vue:116", "抽牌设置更新:", settings);
+        formatAppLog("log", "at pages/index/index.vue:143", "抽牌设置更新:", settings);
       },
       // 种子变更处理
       handleSeedChange(seed) {
@@ -12495,21 +13083,31 @@ ${o3}
       },
       // 根据牌组类型获取牌
       getCardByDeckType(cardIndex, deckType) {
-        const allCards = getAllCards();
+        let targetCards;
         switch (deckType) {
           case "major":
-            const majorCards = allCards.filter((card) => card.id <= 21);
-            return majorCards[cardIndex % majorCards.length];
+            targetCards = this.allCards.filter((card) => card.id <= 21);
+            break;
           case "minor":
-            const minorCards = allCards.filter((card) => card.id >= 22);
-            return minorCards[cardIndex % minorCards.length];
+            targetCards = this.allCards.filter((card) => card.id >= 22);
+            break;
           case "full":
           default:
-            return allCards[cardIndex];
+            targetCards = this.allCards;
+            break;
         }
+        const selectedCard = targetCards[cardIndex % targetCards.length];
+        formatAppLog("log", "at pages/index/index.vue:208", "选中的卡片:", selectedCard);
+        return selectedCard;
       },
       // 主抽牌函数
       async drawCards() {
+        if (!this.allCards[0].imageUrl) {
+          this.allCards = getAllCards().map((card) => ({
+            ...card,
+            imageUrl: TarotImageManager.getImagePath(card)
+          }));
+        }
         if (!this.drawSettings) {
           uni.showToast({ title: "请先完成设置", icon: "none" });
           return;
@@ -12548,7 +13146,7 @@ ${o3}
             icon: "success"
           });
         } catch (error) {
-          formatAppLog("error", "at pages/index/index.vue:228", "抽牌错误:", error);
+          formatAppLog("error", "at pages/index/index.vue:271", "抽牌错误:", error);
           uni.showToast({ title: "抽牌失败", icon: "error" });
         } finally {
           this.drawing = false;
@@ -12574,10 +13172,10 @@ ${o3}
       },
       // 牌事件处理
       onCardFlip(card) {
-        formatAppLog("log", "at pages/index/index.vue:259", "牌被翻开:", card.name);
+        formatAppLog("log", "at pages/index/index.vue:302", "牌被翻开:", card.name);
       },
       onCardReverse(data) {
-        formatAppLog("log", "at pages/index/index.vue:263", "牌正逆位切换:", data.card.name, data.reversed ? "逆位" : "正位");
+        formatAppLog("log", "at pages/index/index.vue:306", "牌正逆位切换:", data.card.name, data.reversed ? "逆位" : "正位");
         const cardIndex = this.drawnCards.findIndex(
           (item) => item.card.id === data.card.id
         );
@@ -12609,7 +13207,7 @@ ${o3}
           }
           uni.setStorageSync("tarotHistory", existingHistory);
         } catch (error) {
-          formatAppLog("error", "at pages/index/index.vue:302", "保存历史记录失败:", error);
+          formatAppLog("error", "at pages/index/index.vue:345", "保存历史记录失败:", error);
         }
       },
       // 导航方法
@@ -12661,9 +13259,13 @@ ${o3}
             this.updateRandomParams();
           }
         });
+        this.allCards = getAllCards().map((card) => ({
+          ...card,
+          imageUrl: TarotImageManager.getImagePath(card)
+        }));
       },
       onShow() {
-        formatAppLog("log", "at pages/index/index.vue:365", "首页显示");
+        formatAppLog("log", "at pages/index/index.vue:412", "首页显示");
       }
     }
   };
@@ -12672,7 +13274,7 @@ ${o3}
     const _component_uni_card = resolveEasycom(vue.resolveDynamicComponent("uni-card"), __easycom_1$2);
     const _component_seed_input = resolveEasycom(vue.resolveDynamicComponent("seed-input"), __easycom_2);
     const _component_draw_result = resolveEasycom(vue.resolveDynamicComponent("draw-result"), __easycom_3);
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_4$2);
+    const _component_share_dialog = resolveEasycom(vue.resolveDynamicComponent("share-dialog"), __easycom_4);
     const _component_uni_section = resolveEasycom(vue.resolveDynamicComponent("uni-section"), __easycom_5);
     const _component_uni_load_more = resolveEasycom(vue.resolveDynamicComponent("uni-load-more"), __easycom_6);
     const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_0);
@@ -12731,16 +13333,16 @@ ${o3}
             vue.createElementVNode("view", { class: "bottom-actions" }, [
               $data.drawnCards.length > 0 ? (vue.openBlock(), vue.createElementBlock("button", {
                 key: 0,
-                onClick: _cache[2] || (_cache[2] = (...args) => $options.shareResult && $options.shareResult(...args)),
+                onClick: _cache[2] || (_cache[2] = (...args) => $options.openShareDialog && $options.openShareDialog(...args)),
                 class: "share-btn"
-              }, [
-                vue.createVNode(_component_uni_icons, {
-                  type: "redo",
-                  size: "20",
-                  color: "#fff"
-                }),
-                vue.createTextVNode(" 📤 分享结果 ")
-              ])) : vue.createCommentVNode("v-if", true)
+              }, " 📤 分享结果 ")) : vue.createCommentVNode("v-if", true),
+              vue.createVNode(
+                _component_share_dialog,
+                { ref: "shareDialog" },
+                null,
+                512
+                /* NEED_PATCH */
+              )
             ])
           ];
         }),
