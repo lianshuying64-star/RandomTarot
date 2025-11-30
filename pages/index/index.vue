@@ -115,6 +115,23 @@
   },
   
  methods: {
+handleTimeChange(time) {
+  console.log('接收到的时间:', time);
+  console.log('时间类型:', typeof time);
+  
+  // 转换为Date对象查看详情
+  const dateObj = new Date(time);
+  console.log('解析后的时间:', dateObj.toString());
+  console.log('UTC时间:', dateObj.toUTCString());
+  console.log('本地时间:', dateObj.toLocaleString());
+  console.log('小时:', dateObj.getHours());
+  console.log('时区偏移:', dateObj.getTimezoneOffset());
+  
+  this.currentSeed = SeedGenerator.fromDateTime(time);
+  this.updateRandomParams();
+},
+
+
 	 // 打开分享对话框
 	   openShareDialog() {
 	     // 🔥 从seed-input组件获取问题文本

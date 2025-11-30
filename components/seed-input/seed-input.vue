@@ -143,11 +143,23 @@ export default {
       this.showFeedback('时间种子已设置');
     },
     
-    useCurrentTime() {
-      const now = new Date().toISOString().replace('T', ' ').substring(0, 16);
-      this.timeSeed = now;
-      this.emitTimeSeed(now);
-    },
+	useCurrentTime() {
+	  const now = new Date();
+	  // 使用本地时间的各个部分构造时间字符串
+	  const localTimeString = this.formatDateToLocalString(now);
+	  this.timeSeed = localTimeString;
+	  this.emitTimeSeed(localTimeString);
+	},
+
+	// 新增辅助方法：将Date对象格式化为本地时间字符串
+	formatDateToLocalString(date) {
+	  const year = date.getFullYear();
+	  const month = String(date.getMonth() + 1).padStart(2, '0');
+	  const day = String(date.getDate()).padStart(2, '0');
+	  const hours = String(date.getHours()).padStart(2, '0');
+	  const minutes = String(date.getMinutes()).padStart(2, '0');
+	  return `${year}-${month}-${day} ${hours}:${minutes}`;
+	},
     
     useRandomNumber() {
       this.numberSeed = Math.floor(Math.random() * 1000000).toString();
@@ -165,10 +177,20 @@ export default {
       this.showFeedback('已重置为默认种子');
     },
     
-    formatTime(timeStr) {
-      if (!timeStr) return '';
-      return timeStr.replace('T', ' ').replace(/\.\d+Z$/, '');
-    },
+	formatTime(timeStr) {
+	  if (!timeStr) return '';
+	  // 如果是 ISO 格式的时间，转换为本地显示格式
+	  if (timeStr.includes('T')) {
+		const date = new Date(timeStr);
+		const year = date.getFullYear();
+		const month = String(date.getMonth() + 1).padStart(2, '0');
+		const day = String(date.getDate()).padStart(2, '0');
+		const hours = String(date.getHours()).padStart(2, '0');
+		const minutes = String(date.getMinutes()).padStart(2, '0');
+		return `${year}-${month}-${day} ${hours}:${minutes}`;
+	  }
+	  return timeStr;
+	},
     
     showFeedback(message) {
       uni.showToast({

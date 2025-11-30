@@ -110,14 +110,10 @@
       "list": [
         {
           "pagePath": "pages/index/index",
-          "iconPath": "/static/icons/home.png",
-          "selectedIconPath": "/static/icons/home-active.png",
           "text": "抽牌"
         },
         {
           "pagePath": "pages/history/history",
-          "iconPath": "/static/icons/history.png",
-          "selectedIconPath": "/static/icons/history-active.png",
           "text": "历史"
         }
       ],

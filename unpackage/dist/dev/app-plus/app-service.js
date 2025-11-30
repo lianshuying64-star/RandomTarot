@@ -10758,9 +10758,19 @@ ${o3}
         this.showFeedback("时间种子已设置");
       },
       useCurrentTime() {
-        const now = (/* @__PURE__ */ new Date()).toISOString().replace("T", " ").substring(0, 16);
-        this.timeSeed = now;
-        this.emitTimeSeed(now);
+        const now = /* @__PURE__ */ new Date();
+        const localTimeString = this.formatDateToLocalString(now);
+        this.timeSeed = localTimeString;
+        this.emitTimeSeed(localTimeString);
+      },
+      // 新增辅助方法：将Date对象格式化为本地时间字符串
+      formatDateToLocalString(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        return `${year}-${month}-${day} ${hours}:${minutes}`;
       },
       useRandomNumber() {
         this.numberSeed = Math.floor(Math.random() * 1e6).toString();
@@ -10779,7 +10789,16 @@ ${o3}
       formatTime(timeStr) {
         if (!timeStr)
           return "";
-        return timeStr.replace("T", " ").replace(/\.\d+Z$/, "");
+        if (timeStr.includes("T")) {
+          const date = new Date(timeStr);
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, "0");
+          const day = String(date.getDate()).padStart(2, "0");
+          const hours = String(date.getHours()).padStart(2, "0");
+          const minutes = String(date.getMinutes()).padStart(2, "0");
+          return `${year}-${month}-${day} ${hours}:${minutes}`;
+        }
+        return timeStr;
       },
       showFeedback(message) {
         uni.showToast({
@@ -13025,6 +13044,18 @@ ${cardsText}
       };
     },
     methods: {
+      handleTimeChange(time) {
+        formatAppLog("log", "at pages/index/index.vue:119", "接收到的时间:", time);
+        formatAppLog("log", "at pages/index/index.vue:120", "时间类型:", typeof time);
+        const dateObj = new Date(time);
+        formatAppLog("log", "at pages/index/index.vue:124", "解析后的时间:", dateObj.toString());
+        formatAppLog("log", "at pages/index/index.vue:125", "UTC时间:", dateObj.toUTCString());
+        formatAppLog("log", "at pages/index/index.vue:126", "本地时间:", dateObj.toLocaleString());
+        formatAppLog("log", "at pages/index/index.vue:127", "小时:", dateObj.getHours());
+        formatAppLog("log", "at pages/index/index.vue:128", "时区偏移:", dateObj.getTimezoneOffset());
+        this.currentSeed = SeedGenerator.fromDateTime(time);
+        this.updateRandomParams();
+      },
       // 打开分享对话框
       openShareDialog() {
         const question = this.$refs.seedInput ? this.$refs.seedInput.getQuestion() : "";
@@ -13047,7 +13078,7 @@ ${cardsText}
       onDrawSettingsChange(settings) {
         this.drawSettings = settings;
         this.updateRandomParams();
-        formatAppLog("log", "at pages/index/index.vue:143", "抽牌设置更新:", settings);
+        formatAppLog("log", "at pages/index/index.vue:160", "抽牌设置更新:", settings);
       },
       // 种子变更处理
       handleSeedChange(seed) {
@@ -13097,7 +13128,7 @@ ${cardsText}
             break;
         }
         const selectedCard = targetCards[cardIndex % targetCards.length];
-        formatAppLog("log", "at pages/index/index.vue:208", "选中的卡片:", selectedCard);
+        formatAppLog("log", "at pages/index/index.vue:225", "选中的卡片:", selectedCard);
         return selectedCard;
       },
       // 主抽牌函数
@@ -13146,7 +13177,7 @@ ${cardsText}
             icon: "success"
           });
         } catch (error) {
-          formatAppLog("error", "at pages/index/index.vue:271", "抽牌错误:", error);
+          formatAppLog("error", "at pages/index/index.vue:288", "抽牌错误:", error);
           uni.showToast({ title: "抽牌失败", icon: "error" });
         } finally {
           this.drawing = false;
@@ -13172,10 +13203,10 @@ ${cardsText}
       },
       // 牌事件处理
       onCardFlip(card) {
-        formatAppLog("log", "at pages/index/index.vue:302", "牌被翻开:", card.name);
+        formatAppLog("log", "at pages/index/index.vue:319", "牌被翻开:", card.name);
       },
       onCardReverse(data) {
-        formatAppLog("log", "at pages/index/index.vue:306", "牌正逆位切换:", data.card.name, data.reversed ? "逆位" : "正位");
+        formatAppLog("log", "at pages/index/index.vue:323", "牌正逆位切换:", data.card.name, data.reversed ? "逆位" : "正位");
         const cardIndex = this.drawnCards.findIndex(
           (item) => item.card.id === data.card.id
         );
@@ -13207,7 +13238,7 @@ ${cardsText}
           }
           uni.setStorageSync("tarotHistory", existingHistory);
         } catch (error) {
-          formatAppLog("error", "at pages/index/index.vue:345", "保存历史记录失败:", error);
+          formatAppLog("error", "at pages/index/index.vue:362", "保存历史记录失败:", error);
         }
       },
       // 导航方法
@@ -13265,7 +13296,7 @@ ${cardsText}
         }));
       },
       onShow() {
-        formatAppLog("log", "at pages/index/index.vue:412", "首页显示");
+        formatAppLog("log", "at pages/index/index.vue:429", "首页显示");
       }
     }
   };
