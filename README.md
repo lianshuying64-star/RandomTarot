@@ -1,182 +1,173 @@
-# 🃏 RandomTarot · 离线纯随机塔罗占卜
+# 🃏 RandomTarot · Offline Pure Random Tarot Reading
 
-> 不用联网、不用 AI、不靠玄学服务器——只靠**此时此刻的你与世界的不相干信息**，开出最客观的那张牌。
+> No internet, no AI, no mysterious server-side tricks — only **you, the present moment, and information irrelevant to your question** determine which card is drawn.
 
-一个基于 **uni-app** 开发的轻量塔罗占卜工具。  
-从 2024 年 12 月到 2025 年 4 月，作者本人已经用它为自己算过大大小小数十件事，**个人体感相当准**。  
-它不相信大模型的主观“理解”，只相信**时间、数字、无关信息、问题本身**共同锚定的一次纯粹随机。
-
----
-
-## ✨ 核心理念
-
-大多数塔罗软件/网站要么是伪随机，要么悄悄接入 AI 解读，导致结果被模型偏好污染。  
-**OfflineTarot 的做法是：**
-
-- 🔒 **完全离线** – 所有代码、牌面、释义都打包在本地，不请求任何后端
-- 🎲 **反大模型干扰** – 不调用任何 LLM / 云端推理，杜绝“讨好式解读”
-- 🌱 **客观随机种子** – 抽牌结果由以下信息共同决定：
-  - 当前精确时间（毫秒级）
-  - 用户输入的任意数字
-  - 用户提供的一个**与问题完全不相干的信息**（例如窗外车牌号、上一条手机通知的字数）
-  - 问题本身的文本（可选）
-- 📐 **起卦式随机** – 类似于梅花易数取数，将这些看似无关的因子混合哈希，最终映射到塔罗牌
-- 💾 **本地历史记录**（目前还很粗糙，但能用）
-
-简单说：**不是“塔罗在想什么”，而是“这个瞬间，宇宙通过你给出的无关信息，翻开了哪张牌”。**
+A lightweight tarot reading tool built with **uni-app**.  
+From December 2024 to April 2025, the author has used it for dozens of personal matters — big and small — and **honestly finds it quite accurate**.  
+It doesn't trust the subjective "understanding" of large language models. Instead, it relies only on **time, numbers, irrelevant information, and the question itself** to anchor a single, pure random draw.
 
 ---
 
-## 🧭 当前功能状态
+## ✨ Core Philosophy
 
-✅ 已实现：
+Most tarot apps/websites either use pseudo-randomness or quietly call AI APIs in the background, polluting results with model bias.  
+**OfflineTarot does this differently:**
 
-- 78 张基础塔罗牌（含正逆位）
-- 基于“时间 + 数字 + 无关信息 + 问题”的随机抽取算法（简单版本）
-- 单张牌占卜
-- 非常基础的历史记录（仅存抽取结果与时间）
-- 重置状态（已知有微小 bug：必须填完所有信息才能开始抽卡）
+- 🔒 **Fully Offline** – All code, card images, and interpretations are packaged locally. No backend requests.
+- 🎲 **No LLM Interference** – No large language models, no cloud inference, no "pleasing" interpretations.
+- 🌱 **Objective Random Seeds** – The drawn card is determined by:
+  - Current precise time (milliseconds)
+  - A number you enter
+  - **Information completely irrelevant to your question** (e.g., a license plate outside, the word count of your last notification)
+  - Your question text (optional)
+- 📐 **I-Ching Style Randomization** – These seemingly unrelated factors are mixed and hashed, finally mapping to a tarot card.
+- 💾 **Local History** (currently rough but functional)
 
-🚧 待完善（也是诚实的 TODO）：
-
-1. **提示词不够专业** – 目前牌面解释较口语，缺乏正统塔罗术语
-2. **UI 不够好看** – 功能优先，颜值靠后，待设计优化
-3. **牌阵未完善** – 目前仅支持单张抽牌，三牌阵 / 凯尔特十字等尚未加入
-4. **缺少牌面深度解析** – 没有“学习模块”或详细牌义展开（后续会补）
-5. **牌库扩展性** – 未来可能加入其他体系（如神谕卡、雷诺曼）
-6. **随机算法不够透明 / 深入** – 现在是几个简单随机函数混合，尚未做到塔罗领域最大化的随机熵源
-7. **历史记录功能粗糙** – 只有列表展示，无搜索 / 删除 / 统计
-8. **小 bug 待修** – 例如重置状态时必须全部字段重新填写才能抽卡，否则会卡验证
+Simply put: it's not "what the tarot is thinking", but "in this moment, through the irrelevant information you provide, which card does the universe turn over?"
 
 ---
 
-## 📸 预览
+## 🧭 Current Status
+
+✅ Implemented:
+
+- All 78 basic tarot cards (upright & reversed)
+- Simple randomization algorithm based on "time + number + irrelevant info + question"
+- Single card draw
+- Very basic local history (stores draw results and time)
+- Reset state (known minor bug: you must fill all fields again before drawing)
+
+🚧 Known limitations & TODOs:
+
+1. **Interpretation prompts are not professional** – lacks proper tarot terminology
+2. **UI needs improvement** – functional but not beautiful
+3. **Spread support incomplete** – currently only single card draw
+4. **No in-depth card meaning library** – planned
+5. **Future deck expansion** – possibly oracle cards, Lenormand
+6. **Random algorithm not fully transparent/optimized** – currently simple hashing, not yet maximizing tarot-specific entropy
+7. **History feature is rough** – no search, deletion, or statistics
+8. **Minor bugs** – e.g., reset requires refilling all fields before drawing
+
+---
+
+## 📸 Preview (placeholder)
 
 <img width="643" height="662" alt="image" src="https://github.com/user-attachments/assets/6c58b8e2-ce21-4214-a0de-766259cb7fd7" />
 <img width="637" height="650" alt="image" src="https://github.com/user-attachments/assets/d7b10e8b-7736-4498-9913-07b966e0d99d" />
 <img width="631" height="653" alt="image" src="https://github.com/user-attachments/assets/61709302-593d-4adc-9439-5f9eb8c01837" />
-
-> 目前长得很“开发者审美”，欢迎 PR 美化。
-
----
-
-## 🛠️ 技术栈
-
-| 类别     | 工具/方案                                  |
-| -------- | ------------------------------------------ |
-| 前端框架 | uni-app（Vue 3）                           |
-| 跨端支持 | H5 / 微信小程序 / App（主要测试 H5）       |
-| 状态存储 | localStorage / uni.setStorage              |
-| 随机种子 | 时间 + 用户数字 + 无关信息 + 问题文本 哈希 |
-| 牌面数据 | 本地 JSON（含正逆位简解）                  |
+> Currently looks like "developer UI". PRs welcome.
 
 ---
 
-## 🚀 快速开始（本地运行）
+## 🛠️ Tech Stack
+
+| Category    | Tools/Solutions                                              |
+| ----------- | ------------------------------------------------------------ |
+| Frontend    | uni-app (Vue 3)                                              |
+| Platforms   | H5 / WeChat Mini Program / App (mainly H5 tested)            |
+| Storage     | localStorage / uni.setStorage                                |
+| Random Seed | Hash of timestamp + user number + irrelevant info + question text |
+| Card Data   | Local JSON (with brief upright/reversed meanings)            |
+
+---
+
+## 🚀 Quick Start (Local Development)
 
 ```bash
-# 1. 克隆仓库
+# 1. Clone repository
 git clone https://github.com/yourname/offline-tarot.git
 cd offline-tarot
 
-# 2. 安装依赖
+# 2. Install dependencies
 npm install
 
-# 3. 以 H5 方式运行
+# 3. Run in H5 mode
 npm run dev:h5
 ```
 
-或使用 **HBuilderX** 直接导入项目，运行到浏览器 / 小程序。
+Or import directly into **HBuilderX** and run in browser / mini program.
 
-> 因为完全离线，build 后可以直接丢到任何静态服务器，或者本地 `file://` 打开。
+Since it's fully offline, you can build it and deploy to any static server, or even open it locally with `file://`
 
-> 由于还没开源，所以可以直接访问`https://lianshuying64-star.github.io/`
+## 📖 How to Draw a Card
 
-> 后续有机会，会有个微信小程序码（占位）
-
-## 📖 使用说明（如何抽牌）
-
-1. 打开页面，你会看到输入区：
-   - **你的问题**（可选，只影响随机种子）
-   - **随便一个数字**（必填，比如 3、42、你的心跳次数）
-   - **一个与问题完全不相干的信息**（必填，例如：“窗外有只猫” / “手机电量67%” / “键盘第三个字母是F”）
-2. 点击 **“抽牌”**
-3. 系统自动抓取当前毫秒时间，与上述信息混合哈希 → 确定牌与正逆位
-4. 展示牌面、简要释义，并存入本地历史记录
-5. 可以复制卡牌信息，用大模型解析
-6. 若想重新开始，点击“重置状态”（注意：目前需要再次填全所有字段才能抽牌）
+1. Open the page, you'll see input fields:
+   - **Your question** (optional, only affects random seed)
+   - **A number** (required, e.g., 3, 42, your current heart rate)
+   - **Information completely irrelevant to your question** (required, e.g., "there's a cat outside" / "battery at 67%" / "the third letter on my keyboard is F")
+2. Click **"Draw Card"**
+3. The system captures the current millisecond timestamp, mixes it with the above info → hash → determines card and orientation
+4. Display the card, brief meaning, and save to local history
+5. To reset, click "Reset State" (note: currently requires refilling all fields to draw again)
 
 ------
 
-## 🧪 关于随机算法的说明（当前版本）
+## 🧪 About the Random Algorithm (Current Version)
 
-当前算法是一个简单组合：
+Current algorithm is a simple combination:
 
-- 收集：`时间戳 + 数字 + 无关信息字符串 + 问题字符串`
-- 计算简单哈希（如循环累加字符编码 + 位运算）
-- 对 78 取模得牌编号，再对 2 取模得正逆位
+- Collect: `timestamp + number + irrelevant info string + question string`
+- Compute a simple hash (e.g., loop over char codes + bitwise operations)
+- Modulo 78 for card number, modulo 2 for upright/reversed
 
-**为什么不够完美？**
-塔罗领域讲究“共时性”，理想随机应引入更多物理熵（如设备传感器、鼠标轨迹等）。目前方案**已经避免了纯 `Math.random()` 的伪随机**，但与“最大化塔罗随机性”还有距离。
-后续计划引入 `crypto.getRandomValues` + 用户交互熵池。
+**Why is it not perfect?**
+Tarot ideally involves synchronicity. The ideal random should include more physical entropy (device sensors, mouse trajectories, etc.). The current solution **avoids pure `Math.random()` pseudo-randomness**, but hasn't yet maximized tarot-specific randomness.
+Future plan: introduce `crypto.getRandomValues` + user interaction entropy pool.
 
-> 如果你对随机性有执念，欢迎一起设计更透明的随机方案（Issue 区讨论）。
-
-------
-
-## 🗺️ 未来计划
-
-- 重构提示词系统，加入正统塔罗牌义（正位 / 逆位 / 元素 / 占星对应）
-- 全新 UI 设计，支持暗色主题
-- 经典牌阵：三张牌（过去-现在-未来）、凯尔特十字、二选一
-- 牌面详细解析库 + 学习模式（每张牌的符号、神话背景）
-- 支持扩展牌组（神谕卡可作为独立模块）
-- 开源随机算法并可视化随机源，让用户可验证“这一次到底是怎么抽出来的”
-- 完善历史记录：删除、导出、统计高频牌
-- 修复“重置状态需全部重填”的 bug
+> If you're passionate about randomness, feel free to discuss in Issues.
 
 ------
 
-## 🤝 开源计划 & 贡献
+## 🗺️ Future Plans
 
-本项目目前是**个人自用 + 实验性质**的代码。
-我（作者）正在研究如何以“有条件授权”的方式开源，原则是：
-
-- 非商用 / 个人学习可自由使用源码
-- 修改后若公开发布，需保留原始理念说明（避免被拿去包装成“AI 塔罗”）
-- 商用、定制、集成到其他产品需单独授权
-
-**在正式确定许可证之前**，本项目仓库暂为 **All rights reserved**，但非常欢迎：
-
-- 提交 [Issue](https://github.com/yourname/offline-tarot/issues) 反馈 bug、提建议、讨论随机算法
-- 告知你想要的功能，或指出牌义错误
-- 如果你有 UI / 塔罗专业 / 随机数方面的经验，愿意一起完善，请先通过 Issue 沟通
-
-> 一旦条件成熟，我会选择 **MIT / GPLv3 / 自定义署名-非商业授权** 中的一种，并开放 PR 通道。
-> 📄 当前项目采用 自定义临时许可证，详情见 LICENSE。禁止商用、禁止伪装成AI塔罗。
+- Refactor interpretation prompts with proper tarot meanings (upright/reversed/elements/astrology)
+- New UI design with dark mode
+- Classic spreads: Three-card (Past-Present-Future), Celtic Cross, Choice spread
+- In-depth card meaning library + learning mode (symbolism, mythology)
+- Support for additional decks (oracle cards as separate module)
+- Open-source the random algorithm and visualize the entropy source, letting users verify "how this card was actually drawn"
+- Improve history: delete, export, card frequency statistics
+- Fix the "reset requires refilling all fields" bug
 
 ------
 
-## 📜 已知问题（微小但真实）
+## 🤝 Open Source Plan & Contributing
 
-- ⚠️ 重置状态后，必须**重新填写数字 + 无关信息 + 问题**才能抽牌（预期外校验）
-- ⚠️ 历史记录目前没有分页，牌多了会很长
-- ⚠️ 部分移动端样式错位（uniapp 兼容性待修）
+This project is currently **personal use + experimental**.
+The author is studying how to open source under "conditional licensing", with these principles:
+
+- Non-commercial / personal learning: free to use the source code
+- Modified versions published publicly must retain the original philosophy (to avoid being repackaged as "AI Tarot")
+- Commercial use, customization, or integration into other products requires separate permission
+
+welcome to:
+
+- Open [Issues](https://github.com/lianshuying64-star/RandomTarot/issues) for bugs, suggestions, or random algorithm discussions
+- Tell me what features you want, or correct card meaning errors
+- If you have UI / tarot expertise / randomness experience and want to help improve, please discuss via Issues first
 
 ------
 
-## 📬 联系作者
+## 📜 Known Minor Issues
 
-- 项目 GitHub：`https://github.com/lianshuying64-star/lianshuying64-star.github.io `
-- 关于塔罗随机性的探讨 / 玄学与技术的结合 → 欢迎开 Issue 聊
-- 作者想赚米出去转转，做点小工具的需求可以联系`3053888727@qq.com`:smile:
+- ⚠️ After reset, you must **refill number + irrelevant info + question** before drawing (unintended validation)
+- ⚠️ History has no pagination — gets long after many draws
+- ⚠️ Some mobile style glitches (uni-app compatibility to be fixed)
 
 ------
 
-## 🌟 最后一句
+## 📬 Contact Author
 
-> 这个工具不承诺“预测未来”，只承诺 **给你一次不受任何人（和AI）影响的随机反射**。
-> 如果你也厌倦了“大数据塔罗”和“讨好型解读”，不妨给它一次机会。
+- GitHub: `https://github.com/lianshuying64-star/lianshuying64-star.github.io`
+- Email: 3053888727@qq.com
+- For tarot randomness discussions / tech meets mysticism → feel free to open an Issue
+
+------
+
+## 🌟 Final Words
+
+> This tool doesn't promise to "predict the future". It only promises to give you **a random reflection uninfluenced by anyone (and any AI)**.
+> If you're tired of "big data tarot" and "pleasing interpretations", give it a chance.
 
 **Tarot is a mirror, not a prophet.
 This mirror has no algorithm bias.**
