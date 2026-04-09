@@ -164,8 +164,8 @@ npm run dev:h5
 
 ## 📬 联系作者
 
-- 项目 GitHub：`https://github.com/lianshuying64-star/lianshuying64-star.github.io `
-- 邮件: `3053888727@qq.com`
+- 项目 GitHub：https://github.com/lianshuying64-star/lianshuying64-star.github.io 
+- 邮件: 3053888727@qq.com
 - 关于塔罗随机性的探讨 / 玄学与技术的结合 → 欢迎开 Issue 聊
 
 ------
