@@ -55,6 +55,7 @@ Simply put: it's not "what the tarot is thinking", but "in this moment, through 
 <img width="643" height="662" alt="image" src="https://github.com/user-attachments/assets/6c58b8e2-ce21-4214-a0de-766259cb7fd7" />
 <img width="637" height="650" alt="image" src="https://github.com/user-attachments/assets/d7b10e8b-7736-4498-9913-07b966e0d99d" />
 <img width="631" height="653" alt="image" src="https://github.com/user-attachments/assets/61709302-593d-4adc-9439-5f9eb8c01837" />
+
 > Currently looks like "developer UI". PRs welcome.
 
 ---
