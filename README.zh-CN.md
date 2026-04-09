@@ -140,20 +140,17 @@ npm run dev:h5
 ## 🤝 开源计划 & 贡献
 
 本项目目前是**个人自用 + 实验性质**的代码。
-我（作者）正在研究如何以“有条件授权”的方式开源，原则是：
+原则是：
 
 - 非商用 / 个人学习可自由使用源码
 - 修改后若公开发布，需保留原始理念说明（避免被拿去包装成“AI 塔罗”）
 - 商用、定制、集成到其他产品需单独授权
 
-**在正式确定许可证之前**，本项目仓库暂为 **All rights reserved**，但非常欢迎：
+非常欢迎：
 
-- 提交 [Issue](https://github.com/yourname/offline-tarot/issues) 反馈 bug、提建议、讨论随机算法
+- 提交 [Issue](https://github.com/lianshuying64-star/RandomTarot/issues) 反馈 bug、提建议、讨论随机算法
 - 告知你想要的功能，或指出牌义错误
 - 如果你有 UI / 塔罗专业 / 随机数方面的经验，愿意一起完善，请先通过 Issue 沟通
-
-> 一旦条件成熟，我会选择 **MIT / GPLv3 / 自定义署名-非商业授权** 中的一种，并开放 PR 通道。
-> 📄 当前项目采用 自定义临时许可证，详情见 LICENSE。禁止商用、禁止伪装成AI塔罗。
 
 ------
 
@@ -168,8 +165,8 @@ npm run dev:h5
 ## 📬 联系作者
 
 - 项目 GitHub：`https://github.com/lianshuying64-star/lianshuying64-star.github.io `
+- 邮件: `3053888727@qq.com`
 - 关于塔罗随机性的探讨 / 玄学与技术的结合 → 欢迎开 Issue 聊
-- 作者想赚米出去转转，做点小工具的需求可以联系`3053888727@qq.com`:smile:
 
 ------
 
