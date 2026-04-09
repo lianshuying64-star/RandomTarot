@@ -76,7 +76,7 @@ Simply put: it's not "what the tarot is thinking", but "in this moment, through 
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourname/offline-tarot.git
+git clone https://github.com/lianshuying64-star/RandomTarot.git
 cd offline-tarot
 
 # 2. Install dependencies
@@ -159,7 +159,7 @@ welcome to:
 
 ## 📬 Contact Author
 
-- GitHub: `https://github.com/lianshuying64-star/lianshuying64-star.github.io`
+- GitHub: https://github.com/lianshuying64-star/lianshuying64-star.github.io
 - Email: 3053888727@qq.com
 - For tarot randomness discussions / tech meets mysticism → feel free to open an Issue
 
