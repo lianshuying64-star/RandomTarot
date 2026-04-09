@@ -90,7 +90,7 @@ npm run dev:h5
 
 > 因为完全离线，build 后可以直接丢到任何静态服务器，或者本地 `file://` 打开。
 
-> 由于还没开源，所以可以直接访问`https://lianshuying64-star.github.io/`
+> 可以直接访问网址：https://github.com/lianshuying64-star/RandomTarot 🌟
 
 > 后续有机会，会有个微信小程序码（占位）
 
