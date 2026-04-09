@@ -22,6 +22,33 @@ lib-cov
 coverage
 *.lcov
 
+# 依赖与构建产物
+node_modules/
+unpackage/
+dist/
+dev/
+
+# 特定编辑器（HBuilderX 个人配置）
+.hbuilderx/
+.vscode/
+.idea/
+
+# 本地运行临时文件
+__MACOSX/
+.DS_Store
+*.log
+*.local
+
+# 环境配置（含隐私信息）
+.env
+.env.local
+.env.*.local
+
+# 测试与临时文件
+*.swp
+*.temp
+*~
+
 # nyc test coverage
 .nyc_output
 
