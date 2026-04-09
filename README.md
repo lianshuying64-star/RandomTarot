@@ -90,6 +90,8 @@ Or import directly into **HBuilderX** and run in browser / mini program.
 
 Since it's fully offline, you can build it and deploy to any static server, or even open it locally with `file://`
 
+Also accessable by website directly : https://github.com/lianshuying64-star/RandomTarot 🌟
+
 ## 📖 How to Draw a Card
 
 1. Open the page, you'll see input fields:
